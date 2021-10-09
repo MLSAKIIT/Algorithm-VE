@@ -21,14 +21,14 @@ function dfs(board,boardSize){
            return false;
         }
     }
-    var O//utput="Solution was found! ";
-    return true;
+    var Output="Solution was found! ";
+    return Output;
        }
 
 
-function isValid(board,row ,col,boardSize,num){
+function isValid(board,row ,col,boardSize,num){ //Checking for the submatrix and rows and column.
  const subMatrixRow = Math.floor(row / 3) *3;
- const subMatrixCol =Math.floor(col % 3) *3;
+ const subMatrixCol =Math.floor(col / 3) *3;
  for(let i= 0; i<boardSize; i++){
      if(board[row][i] == num || board[i][col] == num) return false;
  const curRow = subMatrixRow + Math.floor(i/3);
