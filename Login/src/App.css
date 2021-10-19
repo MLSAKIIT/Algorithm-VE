@@ -1,0 +1,51 @@
+.App{
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  overflow-y:hidden;
+}
+
+.svg-container{
+      height: 25vh;
+}
+
+.wavy-yellow-svg svg{
+  height: 200px;
+  transform: translateX(171%);
+}
+
+.top-svg{
+  overflow-x: hidden;
+}
+
+.semicircle-svg svg {
+  /* transform: rotate(90deg); */
+  /* background-color: red; */
+  height: 200px;
+  transform: translateX(315%);
+  overflow-x: hidden;
+}
+.login-form{
+  display: flex;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+.bottom-svg svg{
+  height: 200px;
+  position:absolute;
+  bottom:0px;
+  transform: translateX(-17%);
+}
