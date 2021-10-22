@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     position: relative;
     font-size: 2px;
     z-index: 1;
@@ -17,4 +17,4 @@ h1:before, h1:after {
 h1:before {
     margin-left: -50%;
     text-align: right;
-}
+} */

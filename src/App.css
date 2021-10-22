@@ -4,12 +4,13 @@
 
 .App {
   text-align: center;
-  width: 100%;
-  background-color: #ffffff;
+  width: 100vw;
+  /* background-color: #ffffff; */
 }
+
 * {
   box-sizing: border-box;
-  font-weight: 500 !important;
+  /* font-weight: 500 !important; */
 }
 
 h1,
@@ -20,13 +21,10 @@ h2 {
 }
 
 h3 {
-
   font-family: 'DM Sans', sans-serif;
 }
 
 hr.divver {
-  
   border: 1px solid #078080;
   width: 90%;
 }
-
