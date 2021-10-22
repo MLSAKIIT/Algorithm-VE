@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
-import Greedy from './Components/Greedy/greedy'
+import Sample from './Components/InfoSample/InfoSample';
 
 
 AOS.init();
@@ -18,13 +18,16 @@ function App() {
       <NavBar/>
       
       <Switch>
-        <Route path="/greedy">
-          <Greedy/>
-        </Route>
 
+          <Route path="/sample">
+            <Sample/>
+          </Route>
+          
           <Route path="/">
             <Landing/>
           </Route>
+
+
       </Switch>
      
       </div>
