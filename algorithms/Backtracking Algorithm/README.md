@@ -1,0 +1,3 @@
+Backtracking Method is implemented to solve sudoku puzzle.The algorithm is written for most general 9x9 sudoku puzzle.
+In this algorithm,all the blank spaces are filled with every possible permutation possible and at every position, the value inserted is checked if it makes a valid sudoku(i.e.,it satisfies all the sudoku rules).
+As soon as all the blank spaces are filled with valid numbers, the function call is terminated and final sudoku board is stored.
