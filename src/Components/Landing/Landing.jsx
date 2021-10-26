@@ -70,13 +70,13 @@ export default function Landing() {
       </div>
       <div className="plate" style={{ position: "relative", height: "100vh" }}>
         <div className="plate-container">
-          <RectangleWhite style={{ width: "30vw" }} />
+          <RectangleWhite style={{ width: "30%" }} />
           <h2
             style={{
               position: "absolute",
               top: "18.2%",
               left: "35.5%",
-              fontSize: "1.5em",
+              fontSize: "1.5rem",
             }}
           >
             What we have on our plate
@@ -86,8 +86,7 @@ export default function Landing() {
           <CardLines
             style={{
               width: "45vw",
-              transform: "translate(5vh,-39vh)",
-
+              transform: "translate(5%,-49%)",
               zIndex: "-2",
               overlay: "hidden",
             }}
