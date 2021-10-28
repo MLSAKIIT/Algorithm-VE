@@ -28,7 +28,7 @@ export default function NavBar() {
                 <Nav.Link className="nav-toggles" href="/#projects">Projects</Nav.Link>
                 <Nav.Link className="nav-toggles" href="/#about">About</Nav.Link>
                 <NavDropdown className="nav-toggles" style={{color:'#3699a1'}} title="Algorithms Used">
-                <NavDropdown.Item className="nav-toggles" href="/algo1">Algo1</NavDropdown.Item>
+                <NavDropdown.Item className="nav-toggles" href="/Greedy">Greedy</NavDropdown.Item>
                 <NavDropdown.Item className="nav-toggles" href="/algo2">Algo2</NavDropdown.Item>
                 <NavDropdown.Item className="nav-toggles" href="/algo3">Algo3</NavDropdown.Item>
                 <NavDropdown.Divider />
