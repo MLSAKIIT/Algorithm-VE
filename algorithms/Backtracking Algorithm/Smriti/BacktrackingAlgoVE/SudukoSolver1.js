@@ -26,7 +26,7 @@ function dfs(board,boardSize){
        }
 
 
-function isValid(board,row ,col,boardSize,num){
+function isValid(board,row ,col,boardSize,num){ //Checking for the submatrix and rows and column.
  const subMatrixRow = Math.floor(row / 3) *3;
  const subMatrixCol =Math.floor(col / 3) *3;
  for(let i= 0; i<boardSize; i++){
