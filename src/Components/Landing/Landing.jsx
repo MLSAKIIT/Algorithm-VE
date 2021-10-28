@@ -12,6 +12,8 @@ import Path4 from "../../Assets/Path5.svg";
 import { ReactComponent as RectangleWhite } from "../../Assets/Rectangle7.svg";
 import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
 import Card from "../AlgoLandingCard/Card";
+import WhyAlgo from "../WhyAlgo/WhyAlgo";
+import Footer from "../Footer/Footer";
 
 export default function Landing() {
   return (
@@ -127,6 +129,23 @@ export default function Landing() {
             // translateY="-123.5vh"
             algorithmName="IMAGE"
           />
+        </div>
+      </div>
+     
+
+
+<div className="why">
+  <WhyAlgo/>
+</div>
+
+
+
+
+
+      <div className="footer">
+        <div>
+        
+         <Footer/>
         </div>
       </div>
     </div>
