@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
-
+import Greedy from './Components/Greedy/Greedy';
 
 AOS.init();
 
@@ -22,7 +22,9 @@ function App() {
           <Route path="/sample">
             <Sample/>
           </Route>
-          
+          <Route path="/Greedy">
+            <Greedy/>
+          </Route>
           <Route path="/">
             <Landing/>
           </Route>
