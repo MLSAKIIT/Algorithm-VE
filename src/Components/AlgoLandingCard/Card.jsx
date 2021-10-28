@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const Card = (props) => {
   return (
@@ -9,8 +10,8 @@ const Card = (props) => {
           width: "200px",
           height: "300px",
           backgroundColor: props.backgroundColor,
-          transform: `translate(${props.translateX},${props.translateY})`,
-          borderRadius: "0",
+
+          borderRadius: "5px",
         }}
       >
         <h3

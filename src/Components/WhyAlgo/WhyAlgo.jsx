@@ -1,11 +1,11 @@
-import React from 'react'
-import image from '../WhyAlgo/Path 11.svg'
+import React from "react";
+import image from "./Path11.svg";
 function whyAlgo() {
-    return (
-     <>
-           <img src={image}/>;
-        </>
-    )
+  return (
+    <>
+      <img src={image} />;
+    </>
+  );
 }
 
-export default whyAlgo
+export default whyAlgo;

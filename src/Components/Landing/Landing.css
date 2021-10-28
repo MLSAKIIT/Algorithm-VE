@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 .landing {
   height: 200vh;
 }
@@ -16,6 +18,10 @@
   /* justify-content: center;
     align-items: center; */
 }
-.why{
+.why {
   min-width: 100vw;
+}
+
+.plate-heading {
+  font-family: "Anton", sans-serif;
 }
