@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
-import Sample from './Components/Sample/Sample';
+import Sample from './Components/dfs/Sample';
 
 
 AOS.init();
