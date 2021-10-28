@@ -14,6 +14,23 @@ import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
 import Card from "../AlgoLandingCard/Card";
 
 export default function Landing() {
+  const plateHeadingStyle = {
+    position: "absolute",
+    fontSize: "3rem",
+    fontWeight: "700 !important",
+    transform: "rotate(270deg) translateY(-50%)", // translateX(-50%)",
+    /* top: 270%; */
+    left: "0px",
+    color: "black",
+    /* background-color: #5348AF;
+    height: 150px;
+    width: 600px; */
+    backgroundColor: "lightgray",
+    padding: "20px",
+    // paddingLeft: "0",
+    // marginTop: "0",
+    // marginLeft: "0",
+  };
   return (
     <div className="landing pt-5">
       <div className="hero" style={{ overflowX: "hidden" }}>
@@ -69,7 +86,7 @@ export default function Landing() {
         </div>
       </div>
       <div className="plate" style={{ position: "relative", height: "100vh" }}>
-        <div className="plate-container">
+        {/* <div className="plate-container">
           <RectangleWhite style={{ width: "30%" }} />
           <h2
             style={{
@@ -81,8 +98,8 @@ export default function Landing() {
           >
             What we have on our plate
           </h2>
-        </div>
-        <div className="plate-card-lines">
+        </div> */}
+        {/* <div className="plate-card-lines">
           <CardLines
             style={{
               width: "45vw",
@@ -91,42 +108,54 @@ export default function Landing() {
               overlay: "hidden",
             }}
           />
-        </div>
+        </div> */}
         <div
-          className="plate-cards"
+          className="plate-heading-and-card-container"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4,1fr)",
-            position: "absolute",
-            top: "48%",
-            left: "16%",
-            columnGap: "20px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
           }}
         >
-          <Card
-            backgroundColor="#96d7df"
-            // translateX="45vh"
-            // translateY="-75vh"
-            algorithmName="BACKTRACKING"
-          />
-          <Card
-            backgroundColor="#f25734"
-            // translateX="80vh"
-            // translateY="-123.5vh"
-            algorithmName="PATH FINDING"
-          />
-          <Card
-            backgroundColor="#f8d122"
-            // translateX="80vh"
-            // translateY="-123.5vh"
-            algorithmName="SPLITWISE"
-          />
-          <Card
-            backgroundColor="#329ca6"
-            // translateX="80vh"
-            // translateY="-123.5vh"
-            algorithmName="IMAGE"
-          />
+          <div className="plate-heading" style={plateHeadingStyle}>
+            Visualize
+          </div>
+
+          <div
+            className="plate-cards"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4,1fr)",
+              // position: "absolute",
+
+              columnGap: "20px",
+            }}
+          >
+            <Card
+              backgroundColor="#96d7df"
+              // translateX="45vh"
+              // translateY="-75vh"
+              algorithmName="BACKTRACKING"
+            />
+            <Card
+              backgroundColor="#f25734"
+              // translateX="80vh"
+              // translateY="-123.5vh"
+              algorithmName="PATH FINDING"
+            />
+            <Card
+              backgroundColor="#f8d122"
+              // translateX="80vh"
+              // translateY="-123.5vh"
+              algorithmName="SPLITWISE"
+            />
+            <Card
+              backgroundColor="#329ca6"
+              // translateX="80vh"
+              // translateY="-123.5vh"
+              algorithmName="IMAGE"
+            />
+          </div>
         </div>
       </div>
     </div>
