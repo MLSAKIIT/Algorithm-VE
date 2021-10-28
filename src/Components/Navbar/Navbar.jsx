@@ -18,8 +18,11 @@ export default function NavBar() {
                 />{' '} */}
             </Navbar.Brand>
             <Navbar.Brand className="nav-name" href="/">
-                <span style={{fontSize: '36px', fontFamily: 'poppins', color:'#fbda2b'}} className="nav-name">Algorithms </span>
-                <span style={{fontSize: '34px', fontFamily: 'poppins'}} className="nav-name">VE</span>
+            <a className="logo" href="/">
+            <img src="https://i.postimg.cc/Qxx0fCCR/Light-Theme-logo.png" alt="logo"  />
+          </a>
+                {/* <span style={{fontSize: '36px', fontFamily: 'poppins', color:'#fbda2b'}} className="nav-name">Algorithms </span>
+                <span style={{fontSize: '34px', fontFamily: 'poppins'}} className="nav-name">VE</span> */}
             </Navbar.Brand>
 
             <Navbar.Toggle className="toggler" aria-controls="responsive-navbar-nav" />
