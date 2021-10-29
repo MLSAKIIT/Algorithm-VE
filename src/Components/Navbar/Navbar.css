@@ -5,7 +5,8 @@
   }
   
   .nav-links {
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
+    justify-content: space-between !important;
   }
   
   .nav-name {
@@ -21,7 +22,13 @@
       transition: 0.2s ease;
   }
 
- 
+ .btn-primary{
+   background-color: #FFDB00 !important;
+   border-color: #FFDB00 !important;
+   color: black !important;
+   width: 6rem;
+ }
+
   @media only screen and (max-width: 786px)
   {
     .nav-name {
