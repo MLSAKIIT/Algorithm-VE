@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
+import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
 
 
 AOS.init();
@@ -22,7 +23,11 @@ function App() {
           <Route path="/sample">
             <Sample/>
           </Route>
-          
+
+          <Route path="/Dijkstra_Algo">
+            <Dijkstra_Algo/>
+          </Route>
+
           <Route path="/">
             <Landing/>
           </Route>
