@@ -9,7 +9,6 @@ import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import dfs from './Components/dfs/dfs';
 
-
 AOS.init();
 
 function App() {
@@ -23,8 +22,10 @@ function App() {
           <Route path="/sample">
             <Sample/>
           </Route>
+
           <Route path="/dfs">
             <dfs/>
+ 
           </Route>
           <Route path="/">
             <Landing/>
