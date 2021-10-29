@@ -13,12 +13,7 @@
     "react-dom": "^17.0.2",
     "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.3.0",
-<<<<<<< HEAD
     "react-scripts": "^4.0.3",
-=======
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.3.3",
->>>>>>> 8da3480fd096f3ec9974f9fd19c055ec53d6dc4a
     "web-vitals": "^1.0.1"
   },
   "scripts": {
