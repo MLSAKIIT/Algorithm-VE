@@ -1,0 +1,94 @@
+.container {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  max-width: fit-content;
+  max-height: 175vh;
+  /* background-color: rgb(248, 174, 124); */
+}
+
+.inspiration {
+  margin-bottom: 3px !important;
+  margin-top: 3px !important;
+  padding-bottom: 0 !important;
+  padding-top: 10px;
+  font-size: 3.5rem;
+  color: rgb(247, 72, 66);
+  text-decoration: overline;
+}
+
+.svg-container {
+  /* transform: translateX(-66%); */
+  margin-top: 0;
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+}
+
+.algo-because__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  text-align: left;
+}
+
+.algo-because__text > h3 {
+  padding-top: 30px;
+  font-size: 1.5rem;
+}
+
+.algo-because__text > h5 {
+  padding-bottom: 30px;
+  font-size: 1rem;
+}
+
+.what-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.row2 {
+  display: grid;
+  column-gap: 0px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.because-svg {
+  margin-right: -50%;
+}
+
+.yellow-svg {
+  z-index: -99;
+}
+
+.row3 {
+  margin: 0;
+  padding: 0;
+}
+
+.because-text {
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.because {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  font-size: 2rem;
+  transform: translate(-80%, -100%);
+}
+
+.why-text {
+  margin-left: 70%;
+  margin-top: -30%;
+  font-size: 2rem;
+  z-index: 33;
+}

@@ -14,6 +14,7 @@ import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
 import Card from "../AlgoLandingCard/Card";
 import WhyAlgo from "../WhyAlgo/WhyAlgo";
 import Footer from "../Footer/Footer";
+import "../WhyAlgo/WhyAlgo.css";
 
 export default function Landing() {
   const plateHeadingStyle = {
@@ -87,7 +88,10 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <div className="plate" style={{ position: "relative", height: "100vh" }}>
+      <div
+        className="plate"
+        style={{ position: "relative", height: "100vh", marginTop: "10%" }}
+      >
         {/* <div className="plate-container">
           <RectangleWhite style={{ width: "30%" }} />
           <h2
@@ -160,21 +164,14 @@ export default function Landing() {
           </div>
         </div>
       </div>
-     
 
-
-<div className="why">
-  <WhyAlgo/>
-</div>
-
-
-
-
+      <div className="why">
+        <WhyAlgo />
+      </div>
 
       <div className="footer">
         <div>
-        
-         <Footer/>
+          <Footer />
         </div>
       </div>
     </div>
