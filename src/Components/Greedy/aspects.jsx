@@ -3,6 +3,8 @@ import {Container, Col, Image, Row} from 'react-bootstrap'
 import '../../AlgoPage.css'
 
 
+
+
 import samplegif from "../../Assets/greedy.png"
 
 export default function Aspects() {
