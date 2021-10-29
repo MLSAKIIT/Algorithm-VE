@@ -8,6 +8,7 @@ import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
+import Bidirectional from './Components/Bidirectional/Bidirectional';
 
 AOS.init();
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/Greedy">
             <Greedy/>
+          </Route>
+          <Route path="/Bidirectional">
+            <Bidirectional/>
           </Route>
           <Route path="/">
             <Landing/>
