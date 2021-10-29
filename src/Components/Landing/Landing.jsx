@@ -1,9 +1,6 @@
 import React from "react";
 import "../Landing/Landing.css";
 
-import { Container, Row, Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-
 import HeroImg from "../../Assets/Hero.png";
 import Path1 from "../../Assets/Path1.svg";
 import Path2 from "../../Assets/Path11.svg";
