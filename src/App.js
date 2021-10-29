@@ -6,14 +6,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
-<<<<<<< Updated upstream
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
-=======
-import Sample from './Components/InfoSample/InfoSample';
+
+
 import Header from './Components/Header/Header';
 
->>>>>>> Stashed changes
 
 AOS.init();
 

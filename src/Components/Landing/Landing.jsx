@@ -1,27 +1,14 @@
 import React from 'react'
 import '../Landing/Landing.css'
-
-import { Container, Row, Col } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
-
-<<<<<<< Updated upstream
-import HeroImg from '../../Assets/Hero.png'
-import Path1 from '../../Assets/Path1.svg'
-import Path2 from '../../Assets/Path11.svg'
-import Path3 from '../../Assets/Rectangle12.svg'
-import Path4 from '../../Assets/Path5.svg'
-=======
 import HeroImg from "../../Assets/Hero.png";
 import Path1 from "../../Assets/Path1.svg";
-import Path2 from "../../Assets/Path11.svg";
-import Path3 from "../../Assets/Rectangle12.svg";
+
 import Path4 from "../../Assets/Path5.svg";
 import { ReactComponent as RectangleWhite } from "../../Assets/Rectangle7.svg";
-import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
-import Card from "../AlgoLandingCard/Card";
+
+
 // import WhyAlgo from "../WhyAlgo/WhyAlgo";
-import Footer from "../Footer/Footer";
->>>>>>> Stashed changes
+// import Footer from "../Footer/Footer";
 
 
 export default function Landing() {
@@ -60,19 +47,7 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
-            <div className="plate">
-
-<<<<<<< Updated upstream
-            </div>
-        </div>
-    )
-=======
-
-
-
-
-
+            <div className="plate"></div>
     </div>
   );
->>>>>>> Stashed changes
 }
