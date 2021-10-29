@@ -3,7 +3,7 @@ import {Container, Col, Image, Row} from 'react-bootstrap'
 import '../../AlgoPage.css'
 
 
-import samplegif from "../../Assets/Dijkstra_Animation.gif"
+import samplegif from "../../Assets/depth_first_traversal.jpg"
 
 export default function Aspects() {
     return (
@@ -20,15 +20,12 @@ export default function Aspects() {
             <Row>
                 <Col xl={8}>
                     <p style={{textAlign:"left", lineHeight:"20px"}}>
-                    Let the node at which we are starting at be called the initial node. Let the distance of node Y be the distance from the initial node to Y. Dijkstra's algorithm will initially start with infinite distances and will try to improve them step by step.<br></br><br></br>
-
-                    Mark all nodes unvisited. Create a set of all the unvisited nodes called the unvisited set.
-                    Assign to every node a tentative distance value: set it to zero for our initial node and to infinity for all other nodes. Set the initial node as current.<br></br>
-                    For the current node, consider all of its unvisited neighbours and calculate their tentative distances through the current node. Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. For example, if the current node A is marked with a distance of 6, and the edge connecting it with a neighbour B has length 2, then the distance to B through A will be 6 + 2 = 8. If B was previously marked with a distance greater than 8 then change it to 8. Otherwise, the current value will be kept.<br></br>
-                    When we are done considering all of the unvisited neighbours of the current node, mark the current node as visited and remove it from the unvisited set. A visited node will never be checked again.<br></br>
-                    If the destination node has been marked visited (when planning a route between two specific nodes) or if the smallest tentative distance among the nodes in the unvisited set is infinity (when planning a complete traversal; occurs when there is no connection between the initial node and remaining unvisited nodes), then stop. The algorithm has finished.<br></br>
-                    Otherwise, select the unvisited node that is marked with the smallest tentative distance, set it as the new "current node", and go back to step 3.<br></br>
-                    When planning a route, it is actually not necessary to wait until the destination node is "visited" as above: the algorithm can stop once the destination node has the smallest tentative distance among all "unvisited" nodes (and thus could be selected as the next "current").<br></br></p>
+                    <b>Depth first search algorithm</b> begins the searching from the root node and goes down till the leaf of a branch at a time looking for a particular key. If the key is not found, the searching retraces its steps back to the point from where the other branch was left unexplored and the same procedure is repeated for that branch.
+                      <br></br><br></br>Since DFS is of <b>RECURSIVE</b> nature, this can be implemented using <b>STACKS</b>.
+                      <br></br><br></br><b>APPLICATION</b><br></br>
+                      <b>1. </b> Solving maze-like puzzles with only one solution: DFS can be used to find all solutions to a maze problem by only considering nodes on the current path in the visited set.<br></br><br></br>
+                      <b>2. </b> Path Finding: DFS is used for finding path between two given nodes - source and destination and cycle detection in graphs
+</p>
                 </Col>
                 <Col xl={4}>
                     <img src={samplegif} style={{height:"100%", width:"100%"}} alt="algogif"/>
@@ -38,21 +35,20 @@ export default function Aspects() {
         </Container>
   
         <Container>
-            <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Psuedocode</h1>
+            <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Pseudocode</h1>
 
             <div className="sec">
-            <Row>
-                <Col xl={8}>
-                    <h3>                    
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
-                <Col xl={4}>
-                    <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
-            </Row>
+            <p style={{textAlign:"left", lineHeight:"25px"}}>
+                        <b style={{fontSize:"20px"}}>Depth first search algorithm:</b> <br></br><br></br>
+                        <b>Step 1:</b>Push the source node to the stack. <br></br><br></br>
+                        <b>Step 2:</b>Maintain a data structure to mark if a node is visited or not.<br></br><br></br>
+                        <b>Step 3:</b>Mark source node S as visited: <b>visited[S] = True</b> <br></br><br></br>
+                        <b>Step 4:</b> While stack is not empty repeat <b>steps 5 - 8</b> below<br></br><br></br>
+                        <b>Step 5:</b> Check each successor of node n, and find whether any node is a goal node or not. If any successor node is goal node, then return success and terminate the search, else proceed to Step 6. <br></br><br></br>
+                        <b>Step 6:</b> For each successor node, algorithm checks for evaluation function f(n), and then check if the node has been in either OPEN or CLOSED list. If the node has not been in both list, then add it to the OPEN list. <br></br><br></br>
+                        <b>Step 7:</b> Return to Step 2.
+                    </p>
+          
             </div>
         </Container>
 
@@ -62,16 +58,25 @@ export default function Aspects() {
 
             <div className="sec">
             <Row>
-                <Col xl={8}>
-                    <h3>                    
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
-                <Col xl={4}>
-                    <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
+            <p style={{textAlign:"left", lineHeight:"20px" , paddingLeft:"50px", paddingTop:"30px"}}>
+              
+              <code>{"Graph.prototype.dfsRecursive = function (start) {"}</code><br></br>
+              &ensp;&ensp;<code>{"const result = [];"}</code><br></br>
+              &ensp;&ensp;<code>{"const visited = {};"}</code><br></br>
+              &ensp;&ensp;<code>{"const adjacencyList = this.adjacencyList;"}</code><br></br>
+              &ensp;&ensp;<code>{"(function dfs(vertex) {"}</code><br></br>
+              &ensp;&ensp;<code>{"if (!vertex) return null;"}</code><br></br>
+              &ensp;&ensp;<code>{"visited[vertex] = true;"}</code><br></br>
+              &ensp;&ensp;<code>{"result.push(vertex);"}</code><br></br>
+              &ensp;&ensp;<code>{"adjacencyList[vertex].forEach((neighbor) => {"}</code><br></br>
+              &ensp;&ensp;<code>{" if (!visited[neighbor]) {"}</code><br></br>
+              &ensp;&ensp;<code>{"return dfs(neighbor);"}</code><br></br>
+              &ensp;&ensp;<code>{"}"}</code><br></br>
+              &ensp;<code>{" });"}</code><br></br>
+              <code>{" })(start);"}</code><br></br>
+              <code>{"return result;"}</code><br></br>
+              &ensp;&ensp;<code>{"};"}</code><br></br>
+              </p>
             </Row>
             </div>
         </Container>

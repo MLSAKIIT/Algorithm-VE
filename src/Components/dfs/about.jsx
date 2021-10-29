@@ -13,18 +13,8 @@ return(
       <h2 className="ts">What is Depth First Search Algorithm?</h2>
 
       <h4 className="my-5" id="ts-para">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem vero
-            fugit accusantium quaerat voluptatibus blanditiis quam architecto.
-            Voluptatem non laborum, consequatur, veritatis consectetur rerum
-            animi, sequi ab debitis excepturi eum deleniti nisi saepe vero
-            eligendi quibusdam enim quas quia repellat commodi. Excepturi earum
-            amet consequuntur, in natus distinctio sed repellendus! Repellat,
-            error. Ullam nulla officia hic facilis ipsam beatae quia quo
-            suscipit, at, distinctio quasi. Est laudantium quidem natus numquam
-            dolorem praesentium esse, explicabo optio harum ipsam quae sequi
-            impedit quam quisquam illum vitae perferendis. Delectus sapiente
-            unde consequatur veniam beatae labore necessitatibus placeat
-            nostrum, obcaecati illo temporibus, earum velit!
+      Depth first search (DFS) algorithm starts with the initial node of the graph G, and then goes to deeper and deeper until we find the goal node or the node which has no children. The algorithm, then backtracks from the dead end towards the most recent node that is yet to be completely unexplored.
+The data structure which is being used in DFS is stack. The process is similar to BFS algorithm. In DFS, the edges that leads to an unvisited node are called discovery edges while the edges that leads to an already visited node are called block edges.
         </h4>
 
       </div>
