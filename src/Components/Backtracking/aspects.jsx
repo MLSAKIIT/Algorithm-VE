@@ -1,7 +1,8 @@
 import React from "react";
 import {Container, Col, Image, Row} from 'react-bootstrap'
 import '../../AlgoPage.css'
-
+import SudokuSolver from './SudokuSolver'
+import './style.css'
 
 import samplegif from "../../Assets/backtrackalgo_gif.gif"
 
@@ -72,7 +73,7 @@ export default function Aspects() {
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="code">Code</h1>
 
-            <div className="sec">
+            <div className="sec" style={{backgroundColor:"black", padding:"15px"}}>
                 <Row>
                 <Col>
                     <p style={{textAlign:"left" , lineHeight:"20px"}}>                    
@@ -137,7 +138,7 @@ export default function Aspects() {
             <h1 className="header-abt text-left pt-5 grad-text" id="visual">Visualization</h1>
 
             <div className="sec">
-            
+                <SudokuSolver />
             </div>
         </Container>
 
