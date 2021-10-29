@@ -33,7 +33,7 @@ export default function NavBar() {
                 <NavDropdown.Item className="nav-toggles" href="/algo2">Algo2</NavDropdown.Item>
                 <NavDropdown.Item className="nav-toggles" href="/algo3">Algo3</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item className="nav-toggles" href="/sample">Sample</NavDropdown.Item>
+                <NavDropdown.Item className="nav-toggles" href="/swarm">Swarm</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link className="nav-toggles" href="/#developers">Developers</Nav.Link>
                 {/* <Nav.Link className="nav-toggles" href="/#developers"><Button href="/login">Login</Button>{' '}</Nav.Link> */}
