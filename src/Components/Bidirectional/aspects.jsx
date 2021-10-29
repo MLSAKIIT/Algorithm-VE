@@ -19,15 +19,21 @@ export default function Aspects() {
             <Row>
                 <Col xl={8}>
                     <p style={{textAlign:"left", lineHeight:"20px"}}>
-                    Let the node at which we are starting at be called the initial node. Let the distance of node Y be the distance from the initial node to Y. Dijkstra's algorithm will initially start with infinite distances and will try to improve them step by step.<br></br><br></br>
+                    <b>Bidirectional search</b> is a graph search where unlike Breadth First search and Depth First Search, the search begins simultaneously from Source vertex and Goal vertex and ends when the two searches meet somewhere in between in the graph. This is thus especially used for getting results in a fraction of the time taken by both DFS and FS searches. The search from the initial node is forward search while that from the goal node is backwards. It is also based on heuristic search meaning finding the shortest path to goal optimally.<br></br><br></br>
 
-                    Mark all nodes unvisited. Create a set of all the unvisited nodes called the unvisited set.
-                    Assign to every node a tentative distance value: set it to zero for our initial node and to infinity for all other nodes. Set the initial node as current.<br></br>
-                    For the current node, consider all of its unvisited neighbours and calculate their tentative distances through the current node. Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. For example, if the current node A is marked with a distance of 6, and the edge connecting it with a neighbour B has length 2, then the distance to B through A will be 6 + 2 = 8. If B was previously marked with a distance greater than 8 then change it to 8. Otherwise, the current value will be kept.<br></br>
-                    When we are done considering all of the unvisited neighbours of the current node, mark the current node as visited and remove it from the unvisited set. A visited node will never be checked again.<br></br>
-                    If the destination node has been marked visited (when planning a route between two specific nodes) or if the smallest tentative distance among the nodes in the unvisited set is infinity (when planning a complete traversal; occurs when there is no connection between the initial node and remaining unvisited nodes), then stop. The algorithm has finished.<br></br>
-                    Otherwise, select the unvisited node that is marked with the smallest tentative distance, set it as the new "current node", and go back to step 3.<br></br>
-                    When planning a route, it is actually not necessary to wait until the destination node is "visited" as above: the algorithm can stop once the destination node has the smallest tentative distance among all "unvisited" nodes (and thus could be selected as the next "current").<br></br></p>
+                    <b>Advantages:</b><br></br><br></br>
+
+                    <b>1.</b>One of the main advantages of bidirectional searches is the speed at which we get the desired results.<br></br>
+                    <b>2.</b>It drastically reduces the time taken by the search by having simultaneous searches.<br></br>
+                    <b>3.</b>It also saves resources for users as it requires less memory capacity to store all the searches.<br></br><br></br>
+
+                    <b>Disadvantages:</b><br></br><br></br>
+
+                    <b>1.</b>The fundamental issue with bidirectional search is that the user should be aware of the goal state to use bidirectional search and thereby to decrease its use cases drastically.<br></br>
+                    <b>2.</b>The implementation is another challenge as additional code and instructions are needed to implement this algorithm, and also care has to be taken as each node and step to implement such searches.<br></br>
+                    <b>3.</b>The algorithm must be robust enough to understand the intersection when the search should come to an end or else there’s a possibility of an infinite loop.<br></br>
+                    <b>4.</b>It is also not possible to search backwards through all states.<br></br>
+                    </p>
                 </Col>
                 <Col xl={4}>
                     <img src={samplegif} style={{height:"100%", width:"100%"}} alt="algogif"/>
@@ -39,18 +45,17 @@ export default function Aspects() {
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Psuedocode</h1>
 
-            <div className="sec">
+            <div className="sec2">
             <Row>
-                <Col xl={8}>
-                    <h3>                    
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
-                <Col xl={4}>
-                    <h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque officiis dolore corporis mollitia ipsam vel facilis ad quaerat tempore iure ex omnis recusandae, placeat laboriosam amet id labore nemo?
-                    </h3>
-                </Col>
+                <p style={{textAlign:"left", lineHeight:"20px"}}>
+                <b>Bidirectional Search Algorithm Steps:</b> <br></br><br></br>
+                
+                <b>Step 1:</b> Say, A is the initial node and O is the goal node, and H is the intersection node.<br></br><br></br>
+
+                <b>Step 2:</b> We will start searching simultaneously from start to goal node and backward from goal to start node.<br></br><br></br>
+
+                <b>Step 3:</b> Whenever the forward search and backward search intersect at one node, then the searching stops.<br></br><br></br>
+                </p>
             </Row>
             </div>
         </Container>
