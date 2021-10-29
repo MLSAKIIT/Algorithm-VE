@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
+import Backtracking from './Components/Backtracking/backtracking'
 
 
 AOS.init();
@@ -23,6 +24,10 @@ function App() {
             <Sample/>
           </Route>
           
+          <Route path="/backtracking">
+            <Backtracking/>
+          </Route>
+
           <Route path="/">
             <Landing/>
           </Route>
