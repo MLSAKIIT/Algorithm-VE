@@ -1,8 +1,6 @@
 import React from "react";
 import "../Landing/Landing.css";
 
-import { Container, Row, Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 
 import HeroImg from "../../Assets/Hero.png";
 import Path1 from "../../Assets/Path1.svg";
@@ -162,7 +160,7 @@ export default function Landing() {
       </div>
      
 
-
+{/* 
 <div className="why">
   <WhyAlgo/>
 </div>
@@ -176,7 +174,7 @@ export default function Landing() {
         
          <Footer/>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

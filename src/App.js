@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import NavBar from './Components/Navbar/Navbar';
+import NavBar from './Components/Header/Header';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/InfoSample/InfoSample';
 
