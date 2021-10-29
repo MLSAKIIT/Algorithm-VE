@@ -1,0 +1,164 @@
+.hero{
+    height: 100vh;
+}
+
+.about {
+    height: 100vh;
+    background-color: #F25734;
+}
+
+.aspects{
+    height: 400vh;
+}
+
+#heroBox
+{
+    position: absolute;
+    z-index: -1;
+    top:16%;
+    left: 20%;
+    width : 60vw;
+    height: 60vh;
+    border: 2px solid #F25734;
+}
+
+.myButton
+{
+    position: absolute;
+    top:72%;
+    left:46%;
+    border: 2px solid #F25734;
+    background: white;
+    padding: 8px 25px;
+}
+
+.ts, .as {
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.ts:before,
+.ts:after {
+  background-color: rgb(255, 255, 255);
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.as:before,
+.as:after {
+  background-color: rgb(0, 0, 0);
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.ts:before, .as::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.ts:after, .as:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+#ts-para {
+    color: white;
+    line-height: 300%;
+}
+
+
+.header-abt {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 700 !important;
+    transform: rotate(270deg);
+    /* top: 270%; */
+    right: 77%;
+    color: white;
+    /* background-color: #5348AF;
+    height: 150px;
+    width: 600px; */
+}
+
+#algo {
+    background-color: #5348AF;
+    height: 150px;
+    width: 600px;
+    top: 270%;
+}
+
+#psuedocode {
+    background-color: #F25734;
+    height: 150px;
+    width: 600px;
+    top: 370%;
+}
+
+#code {
+    background-color: #F8D122;
+    height: 150px;
+    width: 600px;
+    top: 470%;
+}
+
+#visual {
+    background-color: #329CA6;
+    height: 150px;
+    width: 600px;
+    top: 570%;
+}
+
+.para {
+    color: #222525;
+    font-size: 1rem;
+}
+
+.sec {
+    height: 100vh;
+}
+.sec1 {
+    height: 240vh;
+}
+@media only screen and (max-width: 1400px)
+{
+    .header-abt {
+        position: unset;
+        transform: rotate(0deg);
+        font-size: 3rem;
+        font-weight: 700 !important;
+    }
+    #algo {
+        color: #5348AF;
+        background-color: white;
+    }
+    #psuedocode {
+        color: #F25734;
+        background-color: white;
+    }
+    #code {
+        color: #F8D122;
+        background-color: white;
+    }
+    #visual {
+        color: #329CA6;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 786px)
+{
+    .header-abt {
+      font-size: 1rem;
+    }
+}
