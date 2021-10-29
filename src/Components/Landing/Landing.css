@@ -1,18 +1,18 @@
-.landing{
-    height: 200vh;
+.landing {
+  /* height: 200vh; */
 }
 
-.hero{
-    height: 100vh;
+.hero {
+  /* height: 100vh; */
 }
 
-.plate{
-    height: 100vh;
+.plate {
+  /* height: 100vh; */
 }
 
 .my-auto {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
     align-items: center; */
 }

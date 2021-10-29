@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import NavBar from './Components/Navbar/Navbar';
-import Landing from './Components/Landing/Landing';
-import Sample from './Components/Sample/Sample';
-import Greedy from './Components/Greedy/Greedy';
-import Bidirectional from './Components/Bidirectional/Bidirectional';
+import NavBar from "./Components/Navbar/Navbar";
+import Landing from "./Components/Landing/Landing";
+import Sample from "./Components/Sample/Sample";
+import Greedy from "./Components/Greedy/Greedy";
+import Bidirectional from "./Components/Bidirectional/Bidirectional";
+import { Navbar } from "react-bootstrap";
+import Footer from "./Components/Footer/Footer";
 
 AOS.init();
 
@@ -16,29 +18,25 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <NavBar/>
-      
-      <Switch>
-
+        <NavBar />
+        <Switch>
           <Route path="/sample">
-            <Sample/>
+            <Sample />
           </Route>
           <Route path="/Greedy">
-            <Greedy/>
+            <Greedy />
           </Route>
           <Route path="/Bidirectional">
-            <Bidirectional/>
+            <Bidirectional />
           </Route>
           <Route path="/">
-            <Landing/>
+            <Landing />
           </Route>
+        </Switch>
 
-
-      </Switch>
-     
+        <Footer />
       </div>
     </Router>
-
   );
 }
 
