@@ -9,6 +9,8 @@ import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
+import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
+
 
 AOS.init();
 
@@ -29,9 +31,13 @@ function App() {
           <Route path="/Bidirectional">
             <Bidirectional/>
           </Route>
+          <Route path="/Dijkstra_Algo">
+            <Dijkstra_Algo/>        
+          </Route>
           <Route path="/">
             <Landing/>
           </Route>
+
 
 
       </Switch>
