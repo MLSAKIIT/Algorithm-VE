@@ -7,33 +7,39 @@ import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
-
+import Greedy from './Components/Greedy/Greedy';
+import Bidirectional from './Components/Bidirectional/Bidirectional';
+import Footer from "./Components/Footer/Footer";
 
 AOS.init();
-
 function App() {
   return (
     <Router>
       <div className="App">
-      <NavBar/>
-      
-      <Switch>
-
+        <NavBar />
+        <Switch>
           <Route path="/sample">
-            <Sample/>
+            <Sample />
           </Route>
-          
+          <Route path="/Greedy">
+            <Greedy />
+          </Route>
+          <Route path="/Bidirectional">
+            <Bidirectional />
+          </Route>
+          {/* <Route path="/login">
+            <LoginPage />
+          </Route> */}
           <Route path="/">
-            <Landing/>
+            <Landing />
           </Route>
+        </Switch>
 
-
-      </Switch>
-     
+        <Footer/>
       </div>
     </Router>
-
   );
 }
+
 
 export default App;

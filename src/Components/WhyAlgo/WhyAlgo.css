@@ -1,0 +1,88 @@
+.outer_container {
+  height: 230vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.head_conatiner {
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 30vh;
+}
+
+.heading {
+  font-size: 3.5rem;
+  color: rgb(247, 72, 66);
+  text-decoration: overline;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.svg_container {
+  width: 50vw;
+  padding: 0px;
+  margin-top: 0px;
+  height: fit-content;
+}
+
+.green_svg {
+  margin-top: 0;
+}
+
+.row1_left_container {
+  width: 50vw;
+  transform: translateY(-40vh);
+}
+
+.row1_right_container {
+  width: 50vw;
+  transform: translateY(-5vh);
+}
+
+.dotted_svg {
+  width: 60%;
+  height: 50%;
+}
+
+.what_is {
+  font-size: 1.5rem;
+  transform: translateY(-30vh);
+}
+
+.row2_svg_container {
+  width: 65vw;
+  padding: 0px;
+  margin-top: 0px;
+  height: fit-content;
+}
+
+.row2_green_div {
+  transform: scaleX(-1);
+}
+
+.row2_right_container {
+  width: 50vw;
+  transform: translate(20%, -40vh) !important;
+}
+
+.row2_left_container {
+  width: 50vw;
+  transform: translateY(-5vh);
+}
+
+.row2_dotted_svg {
+  width: 85%;
+}
+
+.row2_what_is {
+  font-size: 1.8rem;
+  transform: translateY(-40vh);
+}
