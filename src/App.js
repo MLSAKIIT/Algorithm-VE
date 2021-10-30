@@ -27,14 +27,12 @@ function App() {
             <Sample/>
           </Route>
 
-
-
           <Route path="/">
             <Landing/>
           </Route>
 
 
-          
+
 
           <Route path="/Dijkstra_Algo">
             <Dijkstra_Algo/>
