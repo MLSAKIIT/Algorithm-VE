@@ -1,9 +1,6 @@
 import React from "react";
 import '../../AlgoPage.css'
-import {Container, Col, Image, Row} from 'react-bootstrap'
 import algopic from "../../Assets/sample.png"
-
-
 
 export default function Hero() {
 return(

@@ -3,7 +3,6 @@ import {Container, Col, Image, Row} from 'react-bootstrap'
 import '../../AlgoPage.css'
 import SudokuSolver from './SudokuSolver'
 import './style.css'
-
 import samplegif from "../../Assets/backtrackalgo_gif.gif"
 
 export default function Aspects() {
@@ -12,11 +11,10 @@ export default function Aspects() {
             <div className="container my-5">
             <br></br>
             <h2 className="as" style={{color:"black"}}>Important Aspects of the Algorithm</h2>
-            </div>
+        </div>
 
         <Container> 
             <h1 className="header-abt text-left pt-5 grad-text" id="algo">Algorithm</h1>
-
             <div className="sec">
             <Row>
                 <Col xl={8}>
@@ -142,6 +140,6 @@ export default function Aspects() {
         </Container>
 
 
-        </div>
+    </div>
     )
 }

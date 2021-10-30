@@ -8,6 +8,7 @@ import Generator from './sudokuGenerator';
 import './style.css'
 import celebration from '../../Assets/celebration.gif'
 import failure from '../../Assets/failure.gif'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 export default function SudokuSolver() {
   const [grid, setGrid] = useState(EMPTY_GRID);
@@ -20,7 +21,7 @@ export default function SudokuSolver() {
 
 
   useEffect(() => {
-    const storageBoard = storageService.getBoard();
+    const storageBoard = Generator.generate();
     if (storageBoard) 
       setGrid(storageBoard);
   }, []);
@@ -130,14 +131,31 @@ export default function SudokuSolver() {
         <Row>
         <Card className="shadow" id="crd">
           <Card.Body>
+          {/* <Dropdown disabled={isSolving} className="bttn" style={{ border:"none"}}>
+            <Dropdown.Toggle variant="success" id="dropdown-basic" title="Difficulty"
+              onSelect={() => {
+                reset();
+                var randomGrid = Generator.generate();
+                setGrid(randomGrid);
+                storageService.setBoard(randomGrid);
+              }}>Dropdown Button </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item eventKey="0">Easy</Dropdown.Item>
+              <Dropdown.Item eventKey="1">Medium</Dropdown.Item>
+              <Dropdown.Item eventKey="2">Difficult</Dropdown.Item>
+              <Dropdown.Item eventKey="3">Inhuman</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown> */}
+
             <Button disabled={isSolving} className="bttn" style={{ border:"none"}}
               onClick={() => {
                 reset();
-                var randomGrid = sudokuService.getRandomExample();
+                var randomGrid = Generator.generate();
                 setGrid(randomGrid);
                 storageService.setBoard(randomGrid);
               }}>
-              Example Board</Button>
+              Generate Board</Button>
             <br />
             {isSolving ? (<Button className="mt-3 bttn"  style={{backgroundColor:"red" , borderRadius:"100%" ,border:"none"}} onClick={() => window.location.reload()}>
                 Stop

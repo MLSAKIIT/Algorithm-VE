@@ -1,113 +1,90 @@
-function Rand(a,b){
-    return Math.floor(Math.random()*a+b);
-}
-function initiateGrid(grid,positions)
-{   
-    for(let i=0;i<9;i++)
-        grid[i]=Array(9);
-    for(let i=0;i<(9*9);i++)
-        positions[i]=Array(2);
-
-    var count1=0;
-    while(count1<positions.length)
-    {    
-        for(let i=0;i<9;i++)
-        {
-            var count2=0;    
-            while(count2<9){
-                positions[count1][0]=i;
-                positions[count1][1]=count2;
-                count2++;
-                count1++;
-            }
-        }
-    }
-}
-function assign(a,grid,positions)
+import SudokuService from './sudokuService';
+class SudokuGenerator 
 {
-    for(let i=0;i<a;i++)
+    solvingProcess = [];
+    fillValues(grid,rem)
     {
-        var coord=positions[Rand(positions.length,0)];
-        var assign_row=coord[0];
-        var assign_col=coord[1];
-        var value=checkVal(assign_row,assign_col,grid,positions);
-        grid[assign_row][assign_col]=value;
-        if(!value)
-            grid[assign_row][assign_col]='_';
-        var index_coord = positions.indexOf(coord);
-        positions.splice(index_coord,1);
+        this.fillDiagonal(grid);
+        SudokuService.solve(grid);
+        this.removeKDigits(grid,rem);
     }
-
-}
-function checkVal(row,col,grid,positions)
-{    
-    var choice=[],index_ele,final_val;
-    for(let i=0;i<9;i++)
-        choice.push(i+1);
-    for(var i in grid[row])
+    fillDiagonal(grid)
     {
-        if(grid[row][i])
-        {
-            index_ele=choice.indexOf(grid[row][i]);
-            choice.splice(index_ele,1);
-        }
+        for (let i=0;i<9;i=i+3)
+            this.fillBox(i, i,grid);
     }
-    for(var j in grid)
+    unUsedInBox(rowStart,colStart,num,grid)
     {
-        if(grid[j][col])
-        {
-            index_ele=choice.indexOf(grid[j][col]);
-            choice.splice(index_ele,1);
-        }
+        for (let i = 0; i<3; i++)
+            for (let j = 0; j<3; j++)
+                if (grid[rowStart+i][colStart+j]===num)
+                    return false;
+        return true;
     }
-    function removeEle(a,b,c,d,grid,positions)
-    {    
-        for(let i=a;i<b;i++)
+    fillBox(row,col,grid)
+    {
+        var num;
+        for (let i=0;i<3;i++)
         {
-            for(let j=c;j<d;j++)
+            for (let j=0; j<3; j++)
             {
-                if(grid[i][j])
+                do
                 {
-                    index_ele=choice.indexOf(grid[i][j]);
-                    choice.splice(index_ele,1);
+                    num = this.randomGenerator(9);
                 }
+        while (!this.unUsedInBox(row, col, num,grid));
+                grid[row+i][col+j] = num;
             }
         }
     }
-    if (row<3) 
+    randomGenerator(num)
     {
-        if(col<3)
-            removeEle(0,3,0,3,grid,positions);
-        else if(col>5)
-            removeEle(0,3,6,9,grid,positions);
-        else
-            removeEle(0,3,3,6,grid,positions);
+        return Math.floor((Math.random()*num+1));
     }
-    else if (row>5) 
+    CheckIfSafe(i,j,num,grid)
     {
-        if(col<3)
-            removeEle(6,9,0,3,grid,positions);
-        else if(col>5)
-            removeEle(6,9,6,9,grid,positions);
-        else
-            removeEle(6,9,3,6,grid,positions);
+        return (this.unUsedInRow(i, num,grid) && this.unUsedInCol(j, num,grid) && this.unUsedInBox(i-i%3, j-j%3, num,grid));
     }
-    else 
+    unUsedInRow(i,num,grid)
     {
-        if(col<3)
-            removeEle(3,6,0,3,grid,positions);
-        else if(col>5)
-            removeEle(3,6,6,9,grid,positions);
-        else
-            removeEle(3,6,3,6,grid,positions);
+        for(let j=0;j<9;j++)
+        if(grid[i][j] === num)
+                return false;
+        return true;
     }
-    final_val=choice[Rand(choice.length,0)];
-    return final_val;
+    unUsedInCol(j,num,grid)
+    {
+        for (let i = 0; i<9; i++)
+            if (grid[i][j] === num)
+                return false;
+        return true;
+    }
+
+    removeKDigits(grid,rem)
+    {
+        let count = rem;
+        while (count != 0)
+        {
+            let cellId = this.randomGenerator(9*9)-1;
+            let i = Math.floor((cellId/9));
+            let j = cellId%9;
+            if (grid[i][j] != 0)
+            {
+                count--;
+                grid[i][j] = 0;
+            }
+        }
+    }
+    generate()
+    {
+        var Kvalue=[45,49,53,64];
+        let rem=Kvalue[2];
+        var grid=Array(9);
+        for(let i=0;i<9;i++)
+            grid[i]=Array(9).fill(0);
+        this.fillValues(grid,rem);
+        return grid;
+    }
+
 }
-export default function generate()
-{
-    var grid=Array(9),positions=Array(9);
-    initiateGrid(grid,positions);
-    assign(9*9,grid,positions);  
-    return grid;
-}
+export default new SudokuGenerator();

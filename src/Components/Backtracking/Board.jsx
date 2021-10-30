@@ -10,22 +10,17 @@ function Board({ startGrid, grid, onChange, disabled, popover }) {
         const index = `${i},${j}`;
         squares.push(
           <Square
-            style={
-              startGrid[i][j] === 0 ? { color: "white" , backgroundColor : "red" } : { color: "white" , backgroundColor:"black" } 
-            }
+            style={startGrid[i][j] === 0 ? { color: "white" , backgroundColor : "red" } : { color: "white" , backgroundColor:"black" } }
             key={index}
             id={index}
             onChange={onChange}
             value={grid[i][j] === 0 ? "" : grid[i][j]}
-            disabled={disabled}
-          />
+            disabled={disabled}/>
         );
       }
     }
-
     return squares;
   };
-
   return <div className="sudoku-grid shadow">{renderSquares()}</div>;
 }
 
