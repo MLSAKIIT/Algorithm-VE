@@ -40,7 +40,7 @@ export default function Aspects() {
   
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Psuedocode</h1>
-            <div className="sec" style={{textAlign:"left"}}>
+            <div className="sec" style={{textAlign:"left", backgroundColor:"#ffffb3", padding:"15px"}}>
                 <h5>                
                     <code style={{color:"green"}}>{"// pseudo code"}</code> <br />
                     <code>{"bool BacktrackingSolve(configuration Conf)"}</code> <br />

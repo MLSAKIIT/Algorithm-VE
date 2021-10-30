@@ -17,7 +17,8 @@ export default function SudokuSolver() {
   const [isShowProcessChecked, setIsShowProcessChecked] = useState(true);
   const [isSolved, setIsSolved] = useState(false);
   const [isSolving, setIsSolving] = useState(false);
-  const progressSpeed = 1;
+  const [value,setValue]=useState('');
+  const progressSpeed = 5;
 
 
   useEffect(() => {
@@ -103,9 +104,9 @@ export default function SudokuSolver() {
       return(
         <div>
           <img src={failure} alt="" />
-          <p style={{color:"red"}}> <b style={{fontWeight:"bolder"}}>You missed the trick!!!</b>
+          <p style={{color:"red"}}> <b style={{fontWeight:"bolder"}}>You went wrong somewhere!!!</b>
           <br />
-          Press on Undo to try again.
+          Click on Undo to try again.
         </p>
         </div>
         );  
@@ -119,10 +120,15 @@ export default function SudokuSolver() {
     setIsSolved(true);
   }
 
+  const handleSelect=(e)=>{
+    console.log(e);
+    setValue(e)
+  }
+
   return (
-    <Row style={{height:"90%"}}>
-      <Col sm={8} className="mb-5">
-        <Board  startGrid={startGrid} grid={grid} onChange={handleValueChange}  disabled={isGridDisabled}/>
+    <Row>
+      <Col sm={8} className="mb-5" style={{backgroundColor:"#bbecf0" , padding:"30px", borderRadius:"2%"}}>
+        <Board  startGrid={startGrid} grid={grid} onChange={handleValueChange}  disabled={isGridDisabled} />
       </Col>
       <Col lg className="mb-5">
         <Row >
@@ -134,8 +140,9 @@ export default function SudokuSolver() {
           {/* <Dropdown disabled={isSolving} className="bttn" style={{ border:"none"}}>
             <Dropdown.Toggle variant="success" id="dropdown-basic" title="Difficulty"
               onSelect={() => {
+                handleSelect();
                 reset();
-                var randomGrid = Generator.generate();
+                var randomGrid = Generator.generate(value);
                 setGrid(randomGrid);
                 storageService.setBoard(randomGrid);
               }}>Dropdown Button </Dropdown.Toggle>
@@ -148,7 +155,7 @@ export default function SudokuSolver() {
             </Dropdown.Menu>
           </Dropdown> */}
 
-            <Button disabled={isSolving} className="bttn" style={{ border:"none"}}
+            <Button disabled={isSolving} variant="dark" className="bttn" style={{ border:"none"}}
               onClick={() => {
                 reset();
                 var randomGrid = Generator.generate();
@@ -163,7 +170,7 @@ export default function SudokuSolver() {
             ):(
               <Button className="mt-3 bttn" style={{backgroundColor:"green" , border:"none"}} onClick={handleSolveButtonClicked}>Solve</Button>
             )}
-            <FormCheck  className="mt-3 bttn"  type="checkbox" label="Show solving process"  disabled={isSolving}
+            <FormCheck  className="mt-3"  type="checkbox" label="Show solving process"  disabled={isSolving}
               checked={isShowProcessChecked}  onChange={(e) => setIsShowProcessChecked(e.target.checked)}/>
             <Button className="mt-3 mr-1 bttn" style={{backgroundColor:"red" , border:"none"}}  disabled={isSolving}  onClick={reset}>Clear</Button>
             <Button className="mt-3 ml-1 bttn" style={{border:"none"}}  disabled={!isSolved}  onClick={undo}>Undo</Button>
