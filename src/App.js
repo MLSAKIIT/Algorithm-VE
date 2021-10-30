@@ -11,6 +11,7 @@ import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
 import Footer from "./Components/Footer/Footer";
 import Swarm from './Components/Swarm/Swarm';
+import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
 
 AOS.init();
 function App() {
@@ -31,15 +32,19 @@ function App() {
           <Route path="/Bidirectional">
             <Bidirectional />
           </Route>
+          <Route path="/Dijkstra_Algo">
+            <Dijkstra_Algo/>        
+          </Route>
           {/* <Route path="/login">
             <LoginPage />
           </Route> */}
           <Route path="/">
             <Landing />
           </Route>
-        </Switch>
-
+   
+      </Switch>
         <Footer/>
+
       </div>
     </Router>
   );
