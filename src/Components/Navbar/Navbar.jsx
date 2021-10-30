@@ -42,6 +42,9 @@ export default function NavBar() {
               <NavDropdown.Item className="nav-toggles" href="/backtracking">
                 Backtracking Algorithm
               </NavDropdown.Item>
+              <NavDropdown.Item className="nav-toggles" href="/astar">
+                A Star Algorithm
+              </NavDropdown.Item>
               <NavDropdown.Item className="nav-toggles" href="/dijkstra">
                 Dijkstra's Algorithm
               </NavDropdown.Item>

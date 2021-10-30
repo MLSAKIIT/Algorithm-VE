@@ -10,7 +10,7 @@ return(
 
       <div className="container my-5">
       <br></br>
-      <h2 className="ts">What is A Star Algorithm?</h2>
+      <h2 className="ts">What is a Sample Algorithm?</h2>
 
       <h4 className="my-5" id="ts-para">
       A* Search algorithm is one of the best and popular technique used in path-finding and graph traversals.

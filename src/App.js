@@ -14,6 +14,7 @@ import Footer from "./Components/Footer/Footer";
 import Swarm from './Components/Swarm/Swarm';
 import Dijkstra from './Components/Dijkstra_Algo/Dijkstra_Algo';
 import Backtracking from './Components/Backtracking/backtracking'
+import Astar from './Components/A Star/AStarAlgo';
 
 
 AOS.init();
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/dfs">
           <DepthFirst/>
+          </Route>
+          <Route path="/astar">
+          <Astar/>
           </Route>
           <Route path="/">
             <Landing />

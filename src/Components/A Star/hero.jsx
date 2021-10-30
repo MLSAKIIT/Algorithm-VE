@@ -12,7 +12,7 @@ return(
     
     <div className="container pt-5">
         <center>
-          <h2 className="my-5" style={{backgroundColor: "white", width: "30%"}}>Sample Algorithm</h2>
+          <h2 className="my-5" style={{backgroundColor: "white", width: "30%"}}>A Star Algorithm</h2>
         </center>
 
         <center>
