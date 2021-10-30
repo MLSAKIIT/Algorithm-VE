@@ -9,6 +9,8 @@ import Path4 from "../../Assets/Path5.svg";
 import { ReactComponent as RectangleWhite } from "../../Assets/Rectangle7.svg";
 import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
 import Card from "../AlgoLandingCard/Card";
+import WhyAlgo from "../WhyAlgo/WhyAlgo";
+import WhyAlgoCSS from "../WhyAlgo/WhyAlgo.css";
 
 export default function Landing() {
   const plateHeadingStyle = {
@@ -158,8 +160,10 @@ export default function Landing() {
           </div>
         </div>
       </div>
+      <div>
 
-
+      </div>
+      <WhyAlgo className= {WhyAlgoCSS}/>
     </div>
   );
 }

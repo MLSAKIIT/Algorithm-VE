@@ -1,98 +1,88 @@
-.container {
-  border: 2px solid lightgray;
-  border-radius: 10px;
-  max-width: fit-content;
-  /* max-height: 175vh; */
-  /* background-color: rgb(248, 174, 124); */
+.outer_container {
+  height: 230vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.inspiration {
-  margin-bottom: 3px !important;
-  margin-top: 3px !important;
-  padding-bottom: 0 !important;
-  padding-top: 10px;
+.head_conatiner {
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 30vh;
+}
+
+.heading {
   font-size: 3.5rem;
   color: rgb(247, 72, 66);
   text-decoration: overline;
 }
 
-.svg-container {
-  /* transform: translateX(-66%); */
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.svg_container {
+  width: 50vw;
+  padding: 0px;
+  margin-top: 0px;
+  height: fit-content;
+}
+
+.green_svg {
   margin-top: 0;
 }
 
-.row1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.row1_left_container {
+  width: 50vw;
+  transform: translateY(-40vh);
 }
 
-.algo-because {
-  margin-left: 5%;
-}
-.algo-because__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-60%, -50%);
-  text-align: left;
+.row1_right_container {
+  width: 50vw;
+  transform: translateY(-5vh);
 }
 
-.algo-because__text > h3 {
-  padding-top: 30px;
+.dotted_svg {
+  width: 60%;
+  height: 50%;
+}
+
+.what_is {
   font-size: 1.5rem;
+  transform: translateY(-30vh);
 }
 
-.algo-because__text > h5 {
-  padding-bottom: 30px;
-  font-size: 1rem;
+.row2_svg_container {
+  width: 65vw;
+  padding: 0px;
+  margin-top: 0px;
+  height: fit-content;
 }
 
-.what-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 2rem;
+.row2_green_div {
+  transform: scaleX(-1);
 }
 
-.row2 {
-  display: grid;
-  column-gap: 0px;
-  grid-template-columns: repeat(2, 1fr);
+.row2_right_container {
+  width: 50vw;
+  transform: translate(20%, -40vh) !important;
 }
 
-.because-svg {
-  margin-right: -50%;
+.row2_left_container {
+  width: 50vw;
+  transform: translateY(-5vh);
 }
 
-.yellow-svg {
-  z-index: -99;
+.row2_dotted_svg {
+  width: 85%;
 }
 
-.row3 {
-  margin: 0;
-  padding: 0;
-}
-
-.because-text {
-  display: flex;
-  /* overflow: hidden; */
-}
-
-.because {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: left;
-  font-size: 2rem;
-  transform: translate(-80%, -100%);
-}
-
-.why-text {
-  margin-left: 70%;
-  margin-top: -30%;
-  font-size: 2rem;
-  z-index: 33;
+.row2_what_is {
+  font-size: 1.8rem;
+  transform: translateY(-40vh);
 }
