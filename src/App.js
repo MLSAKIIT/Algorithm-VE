@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
 import Landing from './Components/Landing/Landing';
-import Sample from './Components/Sample/Sample';
+import Swarm from './Components/Swarm/Swarm';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
 
@@ -20,8 +20,8 @@ function App() {
       
       <Switch>
 
-          <Route path="/sample">
-            <Sample/>
+          <Route path="/Swarm">
+            <Swarm />
           </Route>
           <Route path="/Greedy">
             <Greedy/>
