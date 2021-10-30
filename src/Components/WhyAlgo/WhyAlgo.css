@@ -24,8 +24,12 @@
 .row1 {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
+.algo-because {
+  margin-left: 5%;
+}
 .algo-because__text {
   position: absolute;
   top: 50%;
