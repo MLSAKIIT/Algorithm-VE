@@ -9,6 +9,7 @@ import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
+import DepthFirst from './Components/dfs/dfs';
 import Footer from "./Components/Footer/Footer";
 import Swarm from './Components/Swarm/Swarm';
 import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
@@ -42,6 +43,9 @@ function App() {
           </Route> */}
           <Route path="/backtracking">
             <Backtracking/>
+          </Route>
+          <Route path="/dfs">
+          <DepthFirst/>
           </Route>
           <Route path="/">
             <Landing />
