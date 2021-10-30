@@ -51,7 +51,7 @@ const Footer = () => {
 
             <div className="col">
               <div className="contact">
-                <div className="heading link ">
+                <div className="link ">
                   <a href="/" className="">
                     <span className="footer-col-heading">Contact</span>
                   </a>
