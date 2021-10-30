@@ -1,0 +1,211 @@
+function PsoAlgorithm(config) {
+    var positionRanges = config.positionRanges; // range array
+    var calculateError = config.calculateError; // goal function
+
+    if (positionRanges == null) {
+        throw new Error('Input ranges array has not been defined.');
+    }
+    if (calculateError == null) {
+        throw new Error('Calculate error function has not been defined.');
+    }
+
+  	// 0.729 and 1.49445 come from literatire
+    var particleSpeed = config.particleSpeed || 0.1; // should be in range from 0.0 to 1.0
+    var particleInertia = config.particleInertia || 0.729;
+    var globalAcceleration = config.globalAcceleration || 1.49445;
+    var localAcceleration = config.localAcceleration || 1.49445;
+
+    var onIterationStarted = config.onIterationStarted;
+    var onParticleComputed = config.onParticleComputed;
+    var onIterationFinished = config.onIterationFinished;
+
+    function createSolution() {
+        var buffer = [ ];
+        for (var i = 0; i < positionRanges.length; ++i) {
+            buffer.push(Math.random());
+        }
+        var result = {
+            buffer: buffer,
+            position: null,
+            error: Number.POSITIVE_INFINITY
+        };
+        return result;
+    }
+
+    function correctPosition(position) {
+        if (position < 0.0) {
+            return 0.0;
+        }
+        if (position > 1.0) {
+            return 1.0;
+        }
+        return position;
+    }
+
+    function denormalizePosition(position) {
+        var result = [ ];
+        for (var i = 0; i < positionRanges.length; ++i) {
+            var range = positionRanges[i];
+            var scope = range.maximum - range.minimum;
+            result.push(position[i] * scope + range.minimum);
+        }
+        return result;
+    }
+
+    this.createParticle = function() {
+        var actualBuffer = [ ];
+        var actualVelocity = [ ];
+        for (var i = 0; i < positionRanges.length; ++i) {
+            var position = Math.random();
+            var velocity = particleSpeed * Math.random();
+            actualVelocity.push(velocity);
+            actualBuffer.push(position);
+        }
+        var particle = {
+            bestSolution: createSolution(),
+            actualSolution: {
+                velocity: actualVelocity, // normalized particle velocity
+                buffer: actualBuffer, // normalized particle position
+                position: null,
+                error: Number.POSITIVE_INFINITY
+            }
+        };
+        return particle;
+    };
+
+    this.createParticles = function(particlesCount) {
+        var result = [ ];
+        for (var i = 0; i < particlesCount; ++i) {
+            result.push(this.createParticle());
+        }
+        return result;
+    };
+
+    this.computeParticle = function(particle, globalBuffer) {
+        var bestSolution = particle.bestSolution;
+        var bestBuffer = bestSolution.buffer;
+        var actualSolution = particle.actualSolution;
+        var actualBuffer = actualSolution.buffer;
+        var actualVelocity = actualSolution.velocity;
+        for (var i = 0; i < bestBuffer.length; ++i) {
+            var globalDifference = globalBuffer[i] - actualBuffer[i];
+            var localDifference = bestBuffer[i] - actualBuffer[i];
+           	var globalInfluance = globalAcceleration * globalDifference * Math.random();
+          	var localInfluance = localAcceleration * localDifference * Math.random();
+            actualVelocity[i] = particleInertia * actualVelocity[i] 
+                              + globalInfluance + localInfluance;
+            actualBuffer[i] = correctPosition(actualBuffer[i] + actualVelocity[i]);
+        }
+        var computedPosition = denormalizePosition(actualBuffer);
+        var computedError = calculateError(computedPosition);
+        actualSolution.error = computedError;
+        actualSolution.position = computedPosition;
+        if (computedError < bestSolution.error) {
+            bestSolution = particle.bestSolution = {
+                position: computedPosition,
+                buffer: actualBuffer.slice(),
+                error: computedError
+            };
+        }
+        return bestSolution;
+    };
+
+    this.computeEpoch = function(particles, globalBuffer) {
+        var epochSolution = {
+            error: Number.POSITIVE_INFINITY
+        };
+        for (var i = 0; i < particles.length; ++i) {
+            var particle = particles[i];
+            var particleSolution = this.computeParticle(particle, globalBuffer);
+            if (particleSolution.error < epochSolution.error) {
+                epochSolution = particleSolution;
+            }
+            if (onParticleComputed) {
+                onParticleComputed(i, particle.actualSolution, particleSolution);
+            }
+        }
+        return epochSolution;
+    };
+
+    this.computeEpoches$1 = function(toleratedError, epochesLimit, particles) {
+        if (particles.length == 0) {
+            throw new Error("Particles have not been defined.");
+        }
+        var globalSolution = createSolution();
+        for (var i = 0; i < epochesLimit; ++i) {
+            if (onIterationStarted) {
+                onIterationStarted(i);
+            }
+            var epochSolution = this.computeEpoch(particles, globalSolution.buffer);
+            if (epochSolution.error < globalSolution.error) {
+                globalSolution = epochSolution;
+            }
+            if (onIterationFinished) {
+                onIterationFinished(i, globalSolution);
+            }
+            if (globalSolution.error < toleratedError) {
+                break;
+            }
+        }
+        return globalSolution;
+    };
+
+    this.computeEpoches$2 = function(toleratedError, epochesLimit, particlesCount) {
+        var particles = this.createParticles(particlesCount);
+        return this.computeEpoches$1(toleratedError, epochesLimit, particles);
+    };
+}
+
+// Usage example:
+
+var algorithm = new PsoAlgorithm({
+    positionRanges: [
+      	{
+            // x1 search range
+            minimum: -4, maximum: +4
+        },
+        {
+            // x2 search range
+            minimum: -4, maximum: +4
+        }
+    ],
+    particleSpeed: 0.1,
+    particleInertia: 0.729,
+    globalAcceleration: 1.49445,
+    localAcceleration: 1.49445,
+    calculateError: function(position) {
+        var x1 = position[0];
+        var x2 = position[1];
+
+        // we are working with this function
+        var y = x1 * x1 + x2 * x2; // y(x1, x2) = x1^2 + x2^2
+
+        // we are looking for global minimum, so function value is treat as error
+        return y;
+    },
+    onIterationStarted: function(epochIndex) {
+        // nothing here...
+    },
+    onParticleComputed: function(epochIndex, actualSolution, particleSolution) {
+        // nothing here...
+    },
+    onIterationFinished: function(epochIndex, globalSolution) {
+        var error = globalSolution.error;
+        var position = globalSolution.position;
+
+        console.log(epochIndex + '\t' + error + '\t[' + position + ']');
+    }
+});
+
+var toleratedError = 0.01;  // samller or equal computation error stops algorithm
+var epochesLimit = 100;     // maximal number of executed iterations
+var particlesCount = 10;
+
+console.log('[epoch]\t[error]\t\t\t[position]\n');
+
+var solution = algorithm.computeEpoches$2(toleratedError, epochesLimit, particlesCount);
+
+console.log('-------------------------------');
+console.log('Solution:');
+console.log('  error: ' + solution.error);
+console.log('  position: ' + solution.position);
