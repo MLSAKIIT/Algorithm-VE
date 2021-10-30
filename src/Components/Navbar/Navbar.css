@@ -1,39 +1,47 @@
 .navbar {
-    background-color: rgb(252, 252, 252);
-    backdrop-filter: blur(15px);
-    color: #f8f5f2;
-  }
-  
-  .nav-links {
-    margin-right: 3rem;
-  }
-  
+  background-color: rgb(252, 252, 252);
+  backdrop-filter: blur(15px);
+  color: #f8f5f2;
+}
+
+.nav-links {
+  justify-content: space-between !important;
+}
+
+.nav-name {
+  color: #f35435;
+}
+
+.nav-toggles {
+  color: #3699a1 !important;
+}
+
+.nav-toggles:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ffdb00 !important;
+  border-color: #ffdb00 !important;
+  color: black !important;
+  width: 6rem;
+}
+
+@media only screen and (max-width: 786px) {
   .nav-name {
-      color: #f35435;
+    display: none;
   }
 
-  .nav-toggles {
-    color: #3699a1 !important;
-  }
-  
-  .nav-toggles:hover {
-      transform: scale(1.1);
-      transition: 0.2s ease;
+  .nav-links {
+    margin-right: unset;
   }
 
- 
-  @media only screen and (max-width: 786px)
-  {
-    .nav-name {
-        display: none;
-    }
-  
-    .nav-links {
-      margin-right: unset;
-    }
-  
-    .toggler {
-      border: none;
-    }
+  .toggler {
+    border: none;
   }
-  
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+}
