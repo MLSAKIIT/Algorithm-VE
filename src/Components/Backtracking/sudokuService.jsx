@@ -42,7 +42,8 @@ class SudokuService {
         [1, 0, 6, 0, 8, 0, 0, 0, 0],
       ],
     ];
-    return examples[Math.floor(Math.random() * examples.length)];
+    const gr=examples[Math.floor(Math.random() * examples.length)];
+    return gr;
   }
 
   findEmpty(grid) {
@@ -103,49 +104,49 @@ class SudokuService {
   }
   checkans(grid)
   {
-  //(row check)
-  for (let i = 0; i < 9; i++) 
-  {
-    const check=Array(10).fill(false);
-    for(let j=0;j<9;j++)
-    {
-      if(grid[i][j]===0)  return false;
-      if(check[grid[i][j]])  return false;
-      check[grid[i][j]]=true;
-    }
-  }
-
-  //(col check)
-  for (let i = 0; i < 9; i++) 
-  {
-    const check=Array(10).fill(false);
-    for(let j=0;j<9;j++)
-    {
-      if(check[grid[j][i]]===true)
-        return false;
-      check[grid[j][i]]=true;
-    }
-  }
-
-  for (let i = 0; i < 9; i+=3) 
-  {
-    for (let j = 0; j < 9; j+=3) 
+    //(row check)
+    for (let i = 0; i < 9; i++) 
     {
       const check=Array(10).fill(false);
-      for(let itemp=0;itemp<3;itemp++)
+      for(let j=0;j<9;j++)
       {
-        for(let jtemp=0;jtemp<3;jtemp++)
+        if(grid[i][j]===0)  return false;
+        if(check[grid[i][j]])  return false;
+        check[grid[i][j]]=true;
+      }
+    }
+
+    //(col check)
+    for (let i = 0; i < 9; i++) 
+    {
+      const check=Array(10).fill(false);
+      for(let j=0;j<9;j++)
+      {
+        if(check[grid[j][i]]===true)
+          return false;
+        check[grid[j][i]]=true;
+      }
+    }
+
+    for (let i = 0; i < 9; i+=3) 
+    {
+      for (let j = 0; j < 9; j+=3) 
+      {
+        const check=Array(10).fill(false);
+        for(let itemp=0;itemp<3;itemp++)
         {
-          if(check[grid[itemp+i][jtemp+j]]===true)
-            return false;
-          check[grid[itemp+i][jtemp+j]]=true;
+          for(let jtemp=0;jtemp<3;jtemp++)
+          {
+            if(check[grid[itemp+i][jtemp+j]]===true)
+              return false;
+            check[grid[itemp+i][jtemp+j]]=true;
+          }
         }
       }
     }
-  }
 
-  return true;
-}
+    return true;
+  }
 
 }
 

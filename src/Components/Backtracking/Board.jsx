@@ -11,7 +11,7 @@ function Board({ startGrid, grid, onChange, disabled, popover }) {
         squares.push(
           <Square
             style={
-              startGrid[i][j] === 0 ? { color: "red"} : { color: "black"}
+              startGrid[i][j] === 0 ? { color: "white" , backgroundColor : "red" } : { color: "white" , backgroundColor:"black" } 
             }
             key={index}
             id={index}

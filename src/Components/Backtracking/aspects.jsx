@@ -73,7 +73,7 @@ export default function Aspects() {
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="code">Code</h1>
 
-            <div className="sec" style={{backgroundColor:"black", padding:"15px"}}>
+            <div className="sec" style={{backgroundColor:"#ffffb3", padding:"15px"}}>
                 <Row>
                 <Col>
                     <p style={{textAlign:"left" , lineHeight:"20px"}}>                    
@@ -100,9 +100,9 @@ export default function Aspects() {
                         &emsp;&emsp;&emsp;<code>{"}"}</code> <br />
                         &emsp;&emsp;&emsp;<code>{"return false;"}</code> <br />
                         &emsp;&emsp;<code>{"}"}</code> <br />
-                        &emsp;&emsp;<code>{"else"}</code> <br />
-                        &emsp;&emsp;&emsp;&emsp;<code>{"return sudokusolver(board,i,j+1);"}</code> <br />
-                        &emsp;&emsp;<code>{"}"}</code> <br />
+                        &emsp;&emsp;<code style={{borderBottom:"none"}} >{"else"}</code> <br />
+                        &emsp;&emsp;&emsp;&emsp;<code style={{borderBottom:"none"}} >{"return sudokusolver(board,i,j+1);"}</code> <br />
+                        &emsp;&emsp;<code style={{borderBottom:"none"}} >{"}"}</code> <br />
                     </p>
                     </Col>
                     <Col>
@@ -136,9 +136,8 @@ export default function Aspects() {
 
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="visual">Visualization</h1>
-
             <div className="sec">
-                <SudokuSolver />
+                <SudokuSolver style={{ floaat : "right"}}  />
             </div>
         </Container>
 
