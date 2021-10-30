@@ -9,6 +9,7 @@ import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
+import DepthFirst from './Components/dfs/dfs';
 
 AOS.init();
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/Bidirectional">
             <Bidirectional/>
+          </Route>
+          <Route path="/dfs">
+          <DepthFirst/>
           </Route>
           <Route path="/">
             <Landing/>
