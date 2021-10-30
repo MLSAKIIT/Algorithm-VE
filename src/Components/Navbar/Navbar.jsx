@@ -39,7 +39,7 @@ export default function NavBar() {
                         </NavDropdown>
                         <Nav.Link className="nav-toggles" href="/#developers">Developers</Nav.Link>
                     </Nav>
-                    <Nav.Link className="nav-toggles" href="/#developers"><Button className="login_button" href="/login">Login</Button></Nav.Link>
+                    <Nav.Link className="nav-toggles" href="/#developers"><Button className="button" href="/login">Login</Button></Nav.Link>
                 </Navbar.Collapse>
             </Navbar>
         </div>
