@@ -127,7 +127,9 @@
 .sec {
     height: 100vh;
 }
-
+.sec1 {
+    height: 240vh;
+}
 @media only screen and (max-width: 1400px)
 {
     .header-abt {
