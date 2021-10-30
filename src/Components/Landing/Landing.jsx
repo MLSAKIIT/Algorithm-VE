@@ -10,7 +10,7 @@ import { ReactComponent as RectangleWhite } from "../../Assets/Rectangle7.svg";
 import { ReactComponent as CardLines } from "../../Assets/Group2.svg";
 import Card from "../AlgoLandingCard/Card";
 import WhyAlgo from "../WhyAlgo/WhyAlgo";
-import Footer from "../Footer/Footer";
+
 import "../WhyAlgo/WhyAlgo.css";
 
 export default function Landing() {
@@ -166,11 +166,7 @@ export default function Landing() {
         <WhyAlgo />
       </div>
 
-      <div className="footer">
-        <div>
-          <Footer />
-        </div>
-      </div>
+      
     </div>
   );
 }

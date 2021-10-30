@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer'
+
 import Landing from './Components/Landing/Landing';
 import Sample from './Components/InfoSample/InfoSample';
-
+import Footer from "./Components/Footer/Footer";
 
 
 AOS.init();
@@ -28,7 +28,7 @@ function App() {
           <Route path="/">
             <Landing/>
           </Route>
-
+<Footer/>
 
       </Switch>
     <Footer/>
