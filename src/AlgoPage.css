@@ -74,7 +74,7 @@
 
 #ts-para {
     color: white;
-    line-height: 145%;
+    line-height: 300%;
 }
 
 
@@ -101,12 +101,15 @@
 #psuedocode {
     background-color: #F25734;
     height: 150px;
-    
+    width: 600px;
+    top: 370%;
 }
 
 #code {
     background-color: #F8D122;
-    height: 120px;  
+    height: 150px;
+    width: 600px;
+    top: 470%;
 }
 
 #visual {
@@ -123,9 +126,10 @@
 
 .sec {
     height: 100vh;
-    
 }
-
+.sec1 {
+    height: 240vh;
+}
 @media only screen and (max-width: 1400px)
 {
     .header-abt {
