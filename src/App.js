@@ -12,7 +12,7 @@ import Bidirectional from './Components/Bidirectional/Bidirectional';
 import DepthFirst from './Components/dfs/dfs';
 import Footer from "./Components/Footer/Footer";
 import Swarm from './Components/Swarm/Swarm';
-import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
+import Dijkstra from './Components/Dijkstra_Algo/Dijkstra_Algo';
 import Backtracking from './Components/Backtracking/backtracking'
 
 
@@ -36,7 +36,7 @@ function App() {
             <Bidirectional />
           </Route>
           <Route path="/dijkstra">
-            <Dijkstra_Algo/>        
+            <Dijkstra/>        
           </Route>
           {/* <Route path="/login">
             <LoginPage />

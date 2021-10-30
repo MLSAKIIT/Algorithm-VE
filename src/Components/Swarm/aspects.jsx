@@ -13,7 +13,7 @@ export default function Aspects() {
             </div>
 
         <Container> 
-            <h1 className="header-abt text-left pt-5 grad-text" id="algo">Swarm Algorithm</h1>
+            <h1 className="header-abt text-left pt-5 grad-text" id="algo">Algorithm</h1>
 
             <div className="sec">
             <Row>
@@ -37,7 +37,7 @@ export default function Aspects() {
         </Container>
   
         <Container>
-            <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Swarm Psuedocode</h1>
+            <h1 className="header-abt text-left pt-5 grad-text" id="psuedocode">Psuedocode</h1>
 
             <div className="psd">
             <Row>
@@ -58,7 +58,7 @@ export default function Aspects() {
         </Container>
 
         <Container>
-            <h1 className="header-abt text-left pt-5 grad-text" id="code">Swarm Code</h1>
+            <h1 className="header-abt text-left pt-5 grad-text" id="code">Code</h1>
             <div className="comb">
             <Row>
             <p>

@@ -12,15 +12,6 @@ export default function NavBar() {
         variant="light"
         fixed="top"
       >
-        <Navbar.Brand href="/">
-          {/* <img
-                    src={logo}
-                    width="50"
-                    height="50"
-                    className="d-inline-block align-top md:ml-5"
-                    alt="Project Wing logo"
-                />{' '} */}
-        </Navbar.Brand>
         <Navbar.Brand className="nav-name" href="/">
           <a className="logo" href="/">
             <img
@@ -45,14 +36,23 @@ export default function NavBar() {
               }}
               title="Algorithms Used"
             >
-              <NavDropdown.Item className="nav-toggles" href="/algo1">
-                Algo1
+              <NavDropdown.Item className="nav-toggles" href="/dfs">
+                Depth-first Search Algorithm
               </NavDropdown.Item>
-              <NavDropdown.Item className="nav-toggles" href="/algo2">
-                Algo2
+              <NavDropdown.Item className="nav-toggles" href="/backtracking">
+                Backtracking Algorithm
               </NavDropdown.Item>
-              <NavDropdown.Item className="nav-toggles" href="/algo3">
-                Algo3
+              <NavDropdown.Item className="nav-toggles" href="/dijkstra">
+                Dijkstra's Algorithm
+              </NavDropdown.Item>
+              <NavDropdown.Item className="nav-toggles" href="/bidirectional">
+                Bidirectional Swarm Algorithm
+              </NavDropdown.Item>
+              <NavDropdown.Item className="nav-toggles" href="/greedy">
+                Greedy Best-first Search Algorithm
+              </NavDropdown.Item>
+              <NavDropdown.Item className="nav-toggles" href="/swarm">
+                Convergent Swarm Algorithm
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item className="nav-toggles" href="/sample">
