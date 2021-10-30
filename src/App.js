@@ -9,7 +9,6 @@ import Landing from "./Components/Landing/Landing";
 import Sample from "./Components/Sample/Sample";
 import Greedy from "./Components/Greedy/Greedy";
 import Bidirectional from "./Components/Bidirectional/Bidirectional";
-import { Navbar } from "react-bootstrap";
 import Footer from "./Components/Footer/Footer";
 
 AOS.init();
