@@ -1,6 +1,6 @@
 import React from "react";
 import "../Navbar/Navbar.css";
-import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 export default function NavBar() {
   return (
@@ -38,15 +38,11 @@ export default function NavBar() {
         />
         <Navbar.Collapse id="responsive-navbar-nav" className="nav-links">
           <Nav className="ml-auto" style={{ fontFamily: "Poppins" }}>
-            <Nav.Link className="nav-toggles" href="/#projects">
-              Projects
-            </Nav.Link>
-            <Nav.Link className="nav-toggles" href="/#about">
-              About
-            </Nav.Link>
             <NavDropdown
               className="nav-toggles"
-              style={{ color: "#3699a1" }}
+              style={{ color: "#3699a1",
+              left:" 40vw"
+              }}
               title="Algorithms Used"
             >
               <NavDropdown.Item className="nav-toggles" href="/algo1">
@@ -63,9 +59,7 @@ export default function NavBar() {
                 Sample
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className="nav-toggles" href="/#developers">
-              Developers
-            </Nav.Link>
+     
           </Nav>
           <Nav.Link className="nav-toggles" href="/#developers">
             <Button className="button" href="/login">

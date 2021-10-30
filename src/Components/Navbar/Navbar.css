@@ -1,7 +1,7 @@
 .navbar {
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(252, 252, 252,0.2);
   backdrop-filter: blur(15px);
-  color: #f8f5f2;
+color:white;
 }
 
 .nav-links {
@@ -28,20 +28,20 @@
   width: 6rem;
 }
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 300px) {
   .nav-name {
-    display: none;
+    display: none ;
   }
 
   .nav-links {
-    margin-right: unset;
+    margin-right: unset ;
   }
 
   .toggler {
-    border: none;
+    border: none ;
   }
   .logo {
-    height: 50px;
+    height: 50px ;
     width: 50px;
   }
 }
