@@ -10,6 +10,7 @@ import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
 import Footer from "./Components/Footer/Footer";
+import Swarm from './Components/Swarm/Swarm';
 
 AOS.init();
 function App() {
@@ -20,6 +21,9 @@ function App() {
         <Switch>
           <Route path="/sample">
             <Sample />
+          </Route>
+          <Route path="/swarm">
+            <Swarm/>
           </Route>
           <Route path="/Greedy">
             <Greedy />
