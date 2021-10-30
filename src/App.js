@@ -10,6 +10,7 @@ import Sample from "./Components/Sample/Sample";
 import Greedy from "./Components/Greedy/Greedy";
 import Bidirectional from "./Components/Bidirectional/Bidirectional";
 import Footer from "./Components/Footer/Footer";
+import LoginPage from "./Components/Login/LoginPage";
 
 AOS.init();
 
@@ -28,11 +29,14 @@ function App() {
           <Route path="/Bidirectional">
             <Bidirectional />
           </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
           <Route path="/">
             <Landing />
           </Route>
         </Switch>
-<Footer/>
+        <Footer />
       </div>
     </Router>
   );
