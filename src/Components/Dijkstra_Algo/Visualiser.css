@@ -1,0 +1,29 @@
+.grid {
+    margin: 100px 0 0;
+  }
+.btn-vis
+{
+    background: rgba(255, 255, 0, 0.6);
+    width: 250px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    margin: 0px 20px;
+}
+
+.btn-res
+{
+    background: rgba(255, 0, 0,0.7);
+    width: 250px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    margin: 0px 20px;
+}
+
+.btn-vis:hover{
+background:rgba(255, 255, 0);
+}
+.btn-res:hover{
+background:red
+}

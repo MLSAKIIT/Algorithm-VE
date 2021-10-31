@@ -141,7 +141,9 @@ export default function Aspects() {
           Visualization
         </h1>
 
-        <div className="sec"></div>
+        <div className="sec">
+            
+        </div>
       </Container>
     </div>
   );
