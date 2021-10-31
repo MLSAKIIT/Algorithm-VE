@@ -10211,6 +10211,11 @@
     "schema-utils" "^3.0.0"
     "semver" "^7.3.2"
 
+"sawo@^1.0.1":
+  "integrity" "sha512-0iZByBZ7MTsE2WUGo7drk5ssjbNUmzjj8MirUiuKMNPBsfV5X9AMsTXmWMSF3YD80UReOkz6l692x+W6JVWzvQ=="
+  "resolved" "https://registry.npmjs.org/sawo/-/sawo-1.0.1.tgz"
+  "version" "1.0.1"
+
 "sax@~1.2.4":
   "integrity" "sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw=="
   "resolved" "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz"
