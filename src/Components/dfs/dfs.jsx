@@ -4,9 +4,9 @@ import Hero from "./hero";
 import About from "./about";
 import Aspects from "./aspects";
 
-export default function Dijkstra() {
+export default function depthFirst() {
 return(
-    <div className="Dijkstra">
+    <div className="dfsearch">
         <Hero/>
         <About/>
         <Aspects/>

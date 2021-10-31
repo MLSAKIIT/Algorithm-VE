@@ -9,9 +9,13 @@ import Landing from './Components/Landing/Landing';
 import Sample from './Components/Sample/Sample';
 import Greedy from './Components/Greedy/Greedy';
 import Bidirectional from './Components/Bidirectional/Bidirectional';
+import DepthFirst from './Components/dfs/dfs';
 import Footer from "./Components/Footer/Footer";
 import Swarm from './Components/Swarm/Swarm';
-import Dijkstra_Algo from './Components/Dijkstra_Algo/Dijkstra_Algo';
+import Dijkstra from './Components/Dijkstra_Algo/Dijkstra_Algo';
+import Backtracking from './Components/Backtracking/backtracking'
+import Astar from './Components/A Star/AStarAlgo';
+
 
 AOS.init();
 function App() {
@@ -26,18 +30,27 @@ function App() {
           <Route path="/swarm">
             <Swarm/>
           </Route>
-          <Route path="/Greedy">
+          <Route path="/greedy">
             <Greedy />
           </Route>
-          <Route path="/Bidirectional">
+          <Route path="/bidirectional">
             <Bidirectional />
           </Route>
-          <Route path="/Dijkstra_Algo">
-            <Dijkstra_Algo/>        
+          <Route path="/dijkstra">
+            <Dijkstra/>        
           </Route>
           {/* <Route path="/login">
             <LoginPage />
           </Route> */}
+          <Route path="/backtracking">
+            <Backtracking/>
+          </Route>
+          <Route path="/dfs">
+          <DepthFirst/>
+          </Route>
+          <Route path="/astar">
+          <Astar/>
+          </Route>
           <Route path="/">
             <Landing />
           </Route>

@@ -4,9 +4,9 @@ import Hero from "./hero";
 import About from "./about";
 import Aspects from "./aspects";
 
-export default function Dijkstra() {
+export default function Astar() {
 return(
-    <div className="Dijkstra">
+    <div className="AStar">
         <Hero/>
         <About/>
         <Aspects/>
