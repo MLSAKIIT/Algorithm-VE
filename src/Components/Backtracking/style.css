@@ -1,0 +1,50 @@
+
+.bttn{
+  border: none;
+  padding: 15px;
+  margin: 5px;
+}
+
+.bttn:hover{
+  transform: scale(1.1,1.1);
+}
+
+#crd{
+  border: 0.5px solid black; 
+  padding: 5px;
+  border-radius: 10%;
+  margin-left: 20px;
+}
+
+.square {
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  font-size: 2rem;
+}
+
+.square:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.sudoku-grid {
+  display: grid;
+  width: 85%;
+  height: 90vh;
+  margin: auto;
+  grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+}
+
+.sudoku-grid *:nth-child(9n + 6) , .sudoku-grid *:nth-child(9n + 3) {
+  border-right: 8px solid transparent;
+}
+
+
+.sudoku-grid *:nth-child(n + 19):nth-child(-n + 27), *:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 8px solid transparent;
+}
+
