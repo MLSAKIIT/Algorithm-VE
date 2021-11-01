@@ -83,7 +83,7 @@ export default function Aspects() {
 
         <Container>
             <h1 className="header-abt text-left pt-5 grad-text" id="visual">Visualization</h1>
-
+        
             <div className="sec">
             
             </div>
