@@ -11,7 +11,7 @@ return(
         <Hero/>
         <About/>
         <Aspects/>
-        <Visualiser/>
+        {/* <Visualiser/> */}
     </div>
 )
 }

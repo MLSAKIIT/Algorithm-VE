@@ -3,6 +3,7 @@ import { Container, Col, Image, Row } from "react-bootstrap";
 import "../../AlgoPage.css";
 import code from "./code.txt";
 import "./diji.css"
+import Visualizer from "./Visualiser"
 
 import samplegif from "../../Assets/Dijkstra_Animation.gif";
 
@@ -142,7 +143,7 @@ export default function Aspects() {
         </h1>
 
         <div className="sec">
-            
+            <Visualizer/>
         </div>
       </Container>
     </div>
