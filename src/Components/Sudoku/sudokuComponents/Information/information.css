@@ -1,5 +1,5 @@
 .sudokuInformation {
-    background: red;
+    background:#faeee7 ;
     height: 100vh;
     overflow: hidden;
 }
@@ -19,7 +19,7 @@
     left: 0px;
     height: 80vh;
     z-index: 2;
-    background: white;
+    background:#ff6e6c;
     border-radius: 30px;
     padding: 40px;
     box-shadow: 0 0 40px #000;
@@ -28,6 +28,9 @@
     transition: transform 0.6s cubic-bezier(.8,.2,.1,0.8) 0.1s , background 0.4s linear;
     cursor: pointer;
     user-select: none;
+    text-align: left;
+    color:#67568c;
+    font-weight: bold;
 }
 /* .card:last-child
 {
@@ -45,7 +48,7 @@
     animation: card-out 0.6s cubic-bezier(.8,.2,.1,0.8);
     transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
     z-index: 1;
-    background: #bbb;
+    background:#172c66;
 }
   
 @keyframes card-out 
@@ -63,7 +66,8 @@
     position: relative;
     z-index: 10;
     opacity: 1;
-    background: #EEE;
+    background: #ffc6c7;
     transform: rotate(-1deg) translateX(0%) scale(1);
 }
-  
+
+

@@ -9,25 +9,44 @@ export default function Information() {
     return(
         <div className="sudokuInformation">
             <ul className="cards">
-  
+
                 <li className="carddata">
-                    <h1>Comment Card 1 </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, lorem vel tincidunt imperdiet, nibh elit laoreet felis, a bibendum nisl tortor non orci. Donec pretium fermentum felis, quis aliquet est rutrum ut. Integer quis massa ut lacus viverra pharetra in eu lacus. Aliquam tempus odio adipiscing diam pellentesque rhoncus. Curabitur a bibendum est. Mauris vehicula cursus risus id luctus. Curabitur accumsan venenatis nibh, non egestas ipsum vulputate ac. Vivamus consectetur dolor sit amet enim aliquet eu scelerisque ipsum hendrerit. Donec lobortis suscipit vestibulum. Nullam luctus pellentesque risus in ullamcorper. Nam neque nunc, mattis vitae ornare ut, feugiat a erat. Ut tempus iaculis augue vel pellentesque.</p>
+                    <h1>Some Message</h1><br/>
+                    <p>Challenge yourself with our endless interactive Sudoku puzzle!</p>
+                    <p>IT'S FUN - IT'S CHALLENGING - IT'S ADDICTIVE</p>
+                    <p>They are easy and perfect for beginners to get acquainted with the dynamics and rules of the game.</p><br/>
+                    <p>Are you new to Sudoku or want to improve your skills ??  Don't worry, we got you covered.</p><br/>
+                    <p> Just click the slide below of the card and get improved.</p><br/>
+                    
+                </li>
+                <li className="carddata">
+                    <h1>About Sudoku </h1>
+                    <ul>
+                    <li>The popular Japanese puzzle game Sudoku is based on the logical placement of numbers.</li><br/>
+                    <li>The online game of logic, Sudoku doesn’t require any calculation nor special math skills; all that is needed are brains and concentration.</li><br/>
+                    <li>Sudoku is one of the most popular puzzle games of all time. The goal of Sudoku is to fill a 9×9 grid with numbers so that each row, column and 3×3 section contain all of the digits between 1 and 9. As a logic puzzle, Sudoku is also an excellent brain game. </li><br/>
+                    </ul>
                 </li>
 
                 <li className="carddata">
-                    <h1>Comment Card 2 </h1>
-                    <p>Vestibulum nunc massa, gravida quis porta nec, feugiat id metus. Nunc ac arcu dolor, quis vestibulum leo. Cras viverra mollis ipsum, non rhoncus lectus aliquam et. Morbi faucibus purus sit amet lacus aliquet elementum. Donec sit amet posuere enim. Cras in eros id tortor fringilla ultricies. Mauris faucibus ullamcorper velit, pulvinar varius odio eleifend eu. Quisque id odio metus. Morbi adipiscing ultricies posuere. Pellentesque elementum porttitor eros in molestie. Maecenas ut leo quis nisi tempor tincidunt.</p>
+                    <h1>How to play Sudoku? </h1><br/>
+                    <ul>
+                    <li>The goal of Sudoku is to fill in a 9×9 grid with digits so that each column, row, and 3×3 section contain the numbers between 1 to 9</li><br/>
+                    <li>At the beginning of the game, the 9×9 grid will have some of the squares filled in. Your job is to use logic to fill in the missing digits and complete the grid. </li><br/>
+                    Don’t forget, a move is incorrect if:
+                    <li>Any row and column contains more than one of the same number from 1 to 9</li>
+                    <li>Any 3×3 grid contains more than one of the same number from 1 to 9</li>
+                    </ul>
                 </li>
 
                 <li className="carddata">
-                    <h1>Comment Card 3</h1>
-                    <p>Donec nunc ligula, vulputate quis mollis eu, interdum quis libero. Donec nulla ante, facilisis sit amet vulputate at, tincidunt a velit. Maecenas vestibulum, nulla sed tincidunt viverra, lorem turpis aliquam urna, ut pretium orci purus consequat augue. Etiam a enim orci, vitae pulvinar odio. In elit urna, tincidunt a pellentesque et, scelerisque at nibh. Sed nec est sapien. Aliquam ullamcorper eros eu quam ultrices vel faucibus eros interdum. Etiam mattis eleifend sapien, eu iaculis massa feugiat sed. Aliquam erat volutpat. Vivamus facilisis ultricies eros, a pretium purus mollis id. Sed dapibus elit ut neque rutrum dignissim. Nulla eros nisl, venenatis quis rhoncus sit amet, molestie nec nisl. Pellentesque vel neque sapien, et sagittis nulla.</p>
-                </li>
-
-                <li className="carddata">
-                    <h1>Comment Card 4</h1>
-                    <p>Donec nunc ligula, vulputate quis mollis eu, interdum quis libero. Donec nulla ante, facilisis sit amet vulputate at, tincidunt a velit. Maecenas vestibulum, nulla sed tincidunt viverra, lorem turpis aliquam urna, ut pretium orci purus consequat augue. Etiam a enim orci, vitae pulvinar odio. In elit urna, tincidunt a pellentesque et, scelerisque at nibh. Sed nec est sapien. Aliquam ullamcorper eros eu quam ultrices vel faucibus eros interdum. Etiam mattis eleifend sapien, eu iaculis massa feugiat sed. Aliquam erat volutpat. Vivamus facilisis ultricies eros, a pretium purus mollis id. Sed dapibus elit ut neque rutrum dignissim. Nulla eros nisl, venenatis quis rhoncus sit amet, molestie nec nisl. Pellentesque vel neque sapien, et sagittis nulla.</p>
+                    <h1>Sudoku Tips</h1>
+                    <ul>
+                    Sudoku is a fun puzzle game once you get the hang of it. So, if you are a complete beginner, here are a few Sudoku tips that you can use to improve your Sudoku skills.
+                    <li>Tip 1: Look for rows, columns of 3×3 sections that contain 5 or more numbers. Work through the remaining empty cells, trying the numbers that have not been used.</li><br/>
+                    <li>Tip 2: Break the grid up visually into 3 columns and 3 rows. Each large column will have 3, 3×3 grids and each row will have 3, 3×3 grids</li><br/>
+                    <li>Tip 3: Now, look for columns or grids that have 2 of the same number. Logically, there must be a 3rd copy of the same number in the only remaining 9-cell section.</li><br/>
+                    </ul>
                 </li>
             </ul>
         </div>
