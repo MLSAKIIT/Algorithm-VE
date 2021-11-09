@@ -1,10 +1,21 @@
 import React from "react";
+import { Component } from "react";
 import '../Sudoku/Sudoku.css'
+import Landing from './sudokuComponents/Landing/landing'
+import GameSection from './sudokuComponents/GameSection/gamesection'
+import Information from './sudokuComponents/Information/information'
 
-export default function Sudoku() {
-    return (
-        <div className="sudoku">
-            <h1>Hello World!</h1>
-        </div>
-    )
+class Sudoku extends Component {
+    render()
+    {
+        return (
+            <div className="sudoku">
+                <Landing />
+                <GameSection />
+                <Information />
+            </div>
+        )
+    }
 }
+
+export default Sudoku;
