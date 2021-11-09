@@ -1,5 +1,7 @@
 .sudokuInformation {
     background: red;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .cards {
@@ -7,14 +9,17 @@
     list-style-type: none;
     padding: 0;
     max-width: 34em;
-    margin: 20% auto 0;
+    margin: 0% auto;
 }
-.card {
+
+
+.carddata {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5rem;
+    left: 0px;
+    height: 80vh;
     z-index: 2;
-    background: #ccc;
+    background: white;
     border-radius: 30px;
     padding: 40px;
     box-shadow: 0 0 40px #000;
@@ -24,10 +29,10 @@
     cursor: pointer;
     user-select: none;
 }
-.card:last-child
+/* .card:last-child
 {
       margin-bottom: 0;
-}
+} */
   
 .card--next 
 { 
