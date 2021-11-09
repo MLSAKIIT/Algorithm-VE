@@ -25,7 +25,7 @@ useEffect(() => {
     ctx.fillText('Sudoku', 0, 40);
     const data = ctx.getImageData(0, 0, canvas.width, 100);
     const sprite = new Image();
-    sprite.src = 'https://as1.ftcdn.net/v2/jpg/01/19/18/30/1000_F_119183069_6Y4P9poZIuAY5Ns32dXj79DQ21LzCPR9.jpg';
+    sprite.src = 'https://st2.depositphotos.com/3146979/7251/v/600/depositphotos_72519917-stock-illustration-vector-polygonal-background-pattern-triangular.jpg';
     class Particle {
         constructor(x, y) {
             this.x = x + 10;
@@ -41,8 +41,9 @@ useEffect(() => {
             this.angle = Math.random() * 2;
         }
         draw() {
-            if (this.random > 0.05) {
-                ctx.fillStyle = 'white';
+            if (this.random > 0.05) 
+            {
+                ctx.fillStyle = '#181818';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.closePath();
@@ -146,13 +147,13 @@ useEffect(() => {
                     let dy = mouse.y - particleArray[a].y;
                     let mouseDistance = Math.sqrt(dx * dx + dy * dy);
                     if (mouseDistance < mouse.radius / 2) {
-                        ctx.strokeStyle = 'rgba(66, 135, 245,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(79, 196, 207,' + opacityValue + ')';
                     } else if (mouseDistance < mouse.radius - 20) {
-                        ctx.strokeStyle = 'rgba(127,90,240,' + opacityValue + ')';
-                    } else if (mouseDistance < mouse.radius + 10) {
-                        ctx.strokeStyle = 'rgba(245, 55, 29,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(251, 221, 116,' + opacityValue + ')';
+                    } else if (mouseDistance < mouse.radius + 20) {
+                        ctx.strokeStyle = 'rgba(153, 79, 243,' + opacityValue + ')';
                     } else {
-                        ctx.strokeStyle = 'rgba(148, 161, 178,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(24, 24, 24,' + opacityValue + ')';
                     }
                     ctx.lineWidth = 1;
                     ctx.beginPath();

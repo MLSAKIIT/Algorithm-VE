@@ -12,8 +12,16 @@
     margin: 0% auto;
 }
 
+.CardLists{
+    list-style-type: none;
+    /* text-align: center; */
+}
 
-.carddata {
+.CardHeading{
+    text-align: center;
+}
+
+.sudoku-carddata {
     position: absolute;
     top: 5rem;
     left: 0px;

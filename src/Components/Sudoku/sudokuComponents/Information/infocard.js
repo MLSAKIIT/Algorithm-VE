@@ -6,7 +6,7 @@ function InfoCards(){
         return this.each(function(){
       
           var $this = $(this),
-              $cards = $this.find('.carddata'),
+              $cards = $this.find('.sudoku-carddata'),
               $current = $cards.filter('.card--current'),
               $next;
       
