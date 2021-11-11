@@ -2,4 +2,5 @@
 {
     background: black;
     height: 100vh;
+    z-index: -2;
 }

@@ -19,6 +19,7 @@
     "sawo": "^1.0.1",
     "styled-components": "^5.3.3",
     "tsparticles": "^1.37.3",
+    "typed.js": "^2.0.12",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
