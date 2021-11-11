@@ -12,7 +12,7 @@ export default function Particle(){
           left: 0,
           height: '100vh',
           width: '100%',
-          zIndex: 0
+        //   zIndex: 0
           
         }} params={particlesConfig}/>
         </div>

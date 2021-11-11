@@ -1,22 +1,51 @@
-import React from 'react'
+import React,{ Component }  from 'react'
+import Typed from 'react-typed';
 import Particle from './Particle'
 import './Pathfinder.css'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import logo from '../../Assets/Group 2.png'
-import Typed from 'typed.js';
+
+class TypedText extends Component {
+    render() {
+        return (
+            <div>
+                <Typed
+                    strings={['Here you can find anything']}
+                    typeSpeed={40}
+                    style={{
+                        color:"white"
+                    }}
+                />
+                <br/>
+ 
+                <Typed
+                strings={[
+                    'Search for products',
+                    'Search for categories',
+                    'Search for brands']}
+                    typeSpeed={40}
+                    backSpeed={50}
+                    // attr="placeholder"
+                    loop >
+                    <input type="text"/>
+                </Typed>
+            </div>
+        );
+    }
+}
 
 export default function Landing() {
+    
     return (
         <div className="path_landing">
             <Particle/>
-            {/* <h1>Hello World!</h1> */}
 
             <Row>
                 <Col sm={6}>
                 
 
-
+                <TypedText/>,
                     {/* <style type="text/css">
                         {`
                     .btn-xxl {
