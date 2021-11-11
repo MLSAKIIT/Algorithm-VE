@@ -2,5 +2,16 @@
 {
     background: black;
     height: 100vh;
-    /* z-index: -2; */
+    z-index: -50;
+}
+
+.typejs
+{
+    font-size: 60px;
+    background: black;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    padding-top: 190px;
+    font-family: monospace;
 }
