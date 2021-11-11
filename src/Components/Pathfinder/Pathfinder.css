@@ -2,16 +2,37 @@
 {
     background: black;
     height: 100vh;
-    z-index: -50;
 }
 
 .typejs
 {
-    font-size: 60px;
-    background: black;
+    font-size: 4vmax;
+    /* background: black; */
     align-items: center;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 600;
-    padding-top: 190px;
+    padding-top: 10vh;
     font-family: monospace;
 }
+
+.mainhead {
+    padding-top: 15vh;
+    font-size: 6vmax;
+    font-weight: 800 !important;
+    color: #59edff;
+    opacity: 0.8;
+  }
+
+
+  @media only screen and (max-width: 786px) {
+
+
+    .mainhead {
+      padding-top: 10vh;
+    }
+
+    .typejs {
+        font-size: 5vmax;
+    }
+    
+  }

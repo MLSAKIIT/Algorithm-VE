@@ -4,8 +4,7 @@
 
 .App {
   text-align: center;
-  width: 100vw;
-  /* background-color: #ffffff; */
+  overflow-x: hidden;
 }
 
 * {

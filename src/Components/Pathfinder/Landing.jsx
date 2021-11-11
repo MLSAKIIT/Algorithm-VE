@@ -10,15 +10,7 @@ class TypedText extends Component {
   render() {
     return (
       <div className="typejs">
-        {/* <Typed
-                    strings={['Here you can find anything']}
-                    typeSpeed={40}
-                    style={{
-                        color:"white"
-                    }}
-                /> */}
-        <br />
-
+        
         <Typed
           strings={[
             "Dijkstra's Algorithm",
@@ -45,16 +37,18 @@ export default function Landing() {
       <Particle />
 
       <Row>
-        <Col sm={6}>
-          <TypedText />,
+        <Col sm={6} style={{ zIndex: 10 }}>
+          <h1 className="mainhead" >Project Pathseeker</h1>
+          <TypedText />
         </Col>
 
-        <Col sm={6} style={{ zIndex: 100 }}>
+        <Col sm={6} style={{ zIndex: 10 }}>
           <img
             src={logo}
             width="50%"
             className="Landingimg-img"
             style={{ paddingTop: "170px", opacity: 0.8 }}
+            alt="project logo"
           />
         </Col>
       </Row>
