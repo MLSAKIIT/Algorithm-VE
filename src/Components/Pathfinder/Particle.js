@@ -1,5 +1,5 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import particlesConfig from '../../Config/particle-config';
 
 export default function Particle(){
@@ -12,7 +12,6 @@ export default function Particle(){
           left: 0,
           height: '100vh',
           width: '100%',
-          zIndex: 0
           
         }} params={particlesConfig}/>
         </div>
