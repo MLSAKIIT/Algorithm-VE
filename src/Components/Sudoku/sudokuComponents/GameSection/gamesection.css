@@ -1,4 +1,13 @@
 
+.sudoku-gamesection{
+  height: auto;
+  width: 100vw;
+  overflow: scroll;
+  background-image: url('../../Assets/background.jpg');
+  background-size:cover;
+  overflow-x: hidden;
+}
+
 #sudoku-dropdown-basic{
   border: none;
   background-color: #7F5AF0;
@@ -26,13 +35,6 @@
   height: 50%;
 }
 
-#sudoku-gamesection{
-  height: auto;
-  width: 100vw;
-  overflow: scroll;
-  background-image: url('../../Assets/background.jpg');
-  background-size:cover;
-}
 
 .sudoku-land-page{
   height: 100vh;

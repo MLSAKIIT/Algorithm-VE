@@ -154,7 +154,7 @@ export default function GameSection()
   }
 
   return (
-    <div id="sudoku-gamesection">
+    <div className="sudoku-gamesection">
       <div className="sudoku-land-page"> 
         <div id="sudoku-subland">
           <h1 id="sudoku-headingland">My Sudoku</h1>
@@ -177,6 +177,7 @@ export default function GameSection()
           <DropdownButton 
             disabled={isSolving} 
             id="sudoku-dropdown-basic" 
+            // style={{border:"None", backgroundColor:"#7F5AF0", padding:"10px 20px"}}
             title="Generate Board" 
             onSelect={handleSelect}>
               <Dropdown.Item eventKey="0" className="sudoku-dropdown-options">Easy</Dropdown.Item>
