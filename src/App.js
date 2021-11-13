@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+ 
 
         <Switch>
 
@@ -72,12 +72,13 @@ function App() {
           </Route>
 
         {/* Landing Page Route */}
-        <Route path="/">
+        <Route path="/">       
+            <NavBar />
             <Landing />
+            <Footer/>
           </Route>
       </Switch>
 
-      <Footer/>
 
       </div>
     </Router>
