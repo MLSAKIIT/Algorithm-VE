@@ -20,13 +20,13 @@ color:white;
   transform: scale(1.1);
   transition: 0.3s ease;
 }
-
+/* 
 .btn-primary {
   background-color: #ffdb00 !important;
   border-color: #ffdb00 !important;
   color: black !important;
   width: 6rem;
-}
+} */
 
 @media only screen and (max-width: 300px) {
   .nav-name {

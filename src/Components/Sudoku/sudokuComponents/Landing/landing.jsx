@@ -25,7 +25,7 @@ useEffect(() => {
     ctx.fillText('Sudoku', 0, 40);
     const data = ctx.getImageData(0, 0, canvas.width, 100);
     const sprite = new Image();
-    sprite.src = 'https://st2.depositphotos.com/3146979/7251/v/600/depositphotos_72519917-stock-illustration-vector-polygonal-background-pattern-triangular.jpg';
+    sprite.src = 'https://color-hex.org/colors/2cb67d.png';
     class Particle {
         constructor(x, y) {
             this.x = x + 10;
@@ -43,7 +43,7 @@ useEffect(() => {
         draw() {
             if (this.random > 0.05) 
             {
-                ctx.fillStyle = '#181818';
+                ctx.fillStyle = '#fffffe';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.closePath();
@@ -147,13 +147,13 @@ useEffect(() => {
                     let dy = mouse.y - particleArray[a].y;
                     let mouseDistance = Math.sqrt(dx * dx + dy * dy);
                     if (mouseDistance < mouse.radius / 2) {
-                        ctx.strokeStyle = 'rgba(79, 196, 207,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(114, 117, 126,' + opacityValue + ')';
                     } else if (mouseDistance < mouse.radius - 20) {
-                        ctx.strokeStyle = 'rgba(251, 221, 116,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(44, 182, 125,' + opacityValue + ')';
                     } else if (mouseDistance < mouse.radius + 20) {
-                        ctx.strokeStyle = 'rgba(153, 79, 243,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(127, 90, 240,' + opacityValue + ')';
                     } else {
-                        ctx.strokeStyle = 'rgba(24, 24, 24,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(114, 117, 126,' + opacityValue + ')';
                     }
                     ctx.lineWidth = 1;
                     ctx.beginPath();

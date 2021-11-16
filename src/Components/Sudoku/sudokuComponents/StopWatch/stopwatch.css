@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+#sudoku-stopwatch {
+	align-items: center;
+	background-color: #aeb8fe;
+	border-radius: 50%;
+	color: #0b0722;
+	display: flex;
+	flex-direction: column;
+	height: 12rem;
+	justify-content: center;
+	padding: 1rem;
+	position: relative;
+	transition: border 200ms, background-color 200ms;
+	width: 12rem;
+    margin: auto;
+}
+
+#sudoku-timestamp {
+	margin: 1.5rem 0 1rem;
+}
+#sudoku-actionRow {
+	display: flex;
+}
+.sudoku-watchbtn {
+	background-color: #ebedff;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	font-family: "Major Mono Display", monospace;
+	font-size: 10px;
+	text-transform: lowercase;
+	padding: 0.25rem 0.5rem;
+}
+.sudoku-watchbtn:not(:first-child) {
+	margin-left: 0.5rem;
+}
+#reset > svg {
+	transform: translateY(1px);
+}
+
+#sudoku-stopwatch.running {
+	background-color: transparent;
+	border: 0.125rem solid #aeb8fe;
+	color: #ffb35c;
+	transition: border 200ms, background-color 200ms;
+}
+#sudoku-stopwatch.running button {
+	background: none;
+	border: 0.125rem solid #aeb8fe;
+	color: #aeb8fe;
+}
+
+.sudoku-counter {
+	animation: fade-out 10s forwards;
+	border: 0.125rem solid #ffb35c;
+	border-radius: 0.5rem;
+	display: block;
+	height: 0.5rem;
+	position: absolute;
+	width: 2.5rem;
+}
+.sudoku-counter::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border: 0.125rem solid #ffb35c;
+	filter: blur(0.25rem);
+}
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
