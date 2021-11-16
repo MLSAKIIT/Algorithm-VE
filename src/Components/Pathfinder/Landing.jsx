@@ -10,7 +10,6 @@ class TypedText extends Component {
   render() {
     return (
       <div className="typejs">
-        
         <Typed
           strings={[
             "Dijkstra's Algorithm",
@@ -38,7 +37,7 @@ export default function Landing() {
 
       <Row>
         <Col sm={6} style={{ zIndex: 10 }}>
-          <h1 className="mainhead" >Project Pathseeker</h1>
+          <h1 className="mainhead">Project Pathseeker</h1>
           <TypedText />
         </Col>
 
@@ -52,6 +51,15 @@ export default function Landing() {
           />
         </Col>
       </Row>
+
+      <div className="div_button">
+        <div className="scrolldown">
+          <div className="chevrons">
+            <div className="chevrondown"></div>
+            <div className="chevrondown"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
