@@ -53,12 +53,14 @@ export default function Landing() {
       </Row>
 
       <div className="div_button">
+      <a href="#get_start_page">
         <div className="scrolldown">
           <div className="chevrons">
             <div className="chevrondown"></div>
             <div className="chevrondown"></div>
           </div>
         </div>
+      </a>
       </div>
 
       
