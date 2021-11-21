@@ -1,38 +1,235 @@
-.path_landing
-{
-    background: black;
-    height: 100vh;
+.path_landing {
+  background: black;
+  height: 100vh;
 }
 
-.typejs
-{
-    font-size: 4vmax;
-    /* background: black; */
-    align-items: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-    padding-top: 10vh;
-    font-family: monospace;
+.typejs {
+  font-size: 4vmax;
+  /* background: black; */
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  padding-top: 10vh;
+  font-family: monospace;
 }
 
 .mainhead {
-    padding-top: 15vh;
-    font-size: 6vmax;
-    font-weight: 800 !important;
-    color: #59edff;
-    opacity: 0.8;
+  padding-top: 15vh;
+  font-size: 6vmax;
+  font-weight: 800 !important;
+  color: #59edff;
+  opacity: 0.8;
+}
+
+.div_button {
+  position: absolute;
+  right: 50%;
+  padding-top: 90px;
+}
+
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #ffffff66;
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+.chevrondown:nth-child(odd) {
+  animation: pulse 500ms ease infinite alternate;
+}
+.chevrondown:nth-child(even) {
+  animation: pulse 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+/*copy until here */
+
+@media only screen and (max-width: 786px) {
+  .mainhead {
+    padding-top: 10vh;
   }
 
-
-  @media only screen and (max-width: 786px) {
-
-
-    .mainhead {
-      padding-top: 10vh;
-    }
-
-    .typejs {
-        font-size: 5vmax;
-    }
-    
+  .typejs {
+    font-size: 5vmax;
   }
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.get_start_page {
+  height: 100vh;
+  background: black;
+}
+
+/* button */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.path_link {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  margin-top: 40vh;
+}
+
+.path_link:hover{
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 200px #03e9f4;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.path_link:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.path_link:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+.path_link span{
+  position: absolute;
+  display: block;
+}
+.path_link span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+.path_link span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.path_link span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.path_link span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
