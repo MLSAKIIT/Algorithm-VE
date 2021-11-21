@@ -1,32 +1,25 @@
 import React from 'react';
-import './Algorithms.scss';
+import "./Algorithms.css"
+
 
 const Algorithms = () => {
-
     return (
         <>
-            <div className="project_container">
-                <main className="project_grid">
-                    <section className="content project_item1">
-                        <h1 className="project_h1">Algorithms</h1>
-                        <p className="project_p">Lorem ipsum dolor sit amet. Quo perspiciatis sunt qui nemo velit aut eaque accusamus ut commodi porro quo alias praesentium At provident error</p>
-                    </section>
-                    <section className="project_card project_item2 project_flex">
-                        <h2 className="project_h2">Splitwise</h2>
-                    </section>
-                    <section className="project_card project_item5 project_flex">
-                        <h2 className="project_h2">Path Finding</h2>
-                    </section>
-                    <section className="project_card project_item8 project_flex" >
-                        <h2 className="project_h2 project_h2_bk">Backtracking Algorithm</h2>
-                    </section>
-                    <section className="project_card project_item11 project_flex">
-                        <h2 className="project_h2">Image Compression</h2>
-                    </section>
-                </main>
+            <div className="algo_container">
+                <div className="algo_heading">
+                    <h2 className="algo_heading_h2">ALGORITHMS</h2>
+                    <p className="algo_heading_p">Lorem ipsum dolor sit amet. Non minus corrupti ea voluptatem voluptas non aliquam
+                        molestias eum vero rerum? Ex nulla molestiae eum accusamus error aut aliquam
+                        pariatur. Non laboriosam repudiandae sit nobis facilis qui exercitationem voluptatem.
+                        Eos doloremque aut animi quod et rerum perferendis!</p>
+                </div>
+                <div className="algo_button_div">
+                    <button type="button" className="algo_button">See More</button>
+                </div>
             </div>
         </>
     );
 }
+
 
 export default Algorithms;

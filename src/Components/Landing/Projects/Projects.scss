@@ -59,7 +59,7 @@
 
 .project_grid {
   width: 100%;
-  height: 100%;
+  height: 110vh;
   padding: 20px;
   display: grid;
   overflow: hidden;
@@ -67,7 +67,7 @@
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 30px;
   padding: 6%;
-  background: url("https://i.pinimg.com/originals/07/f5/55/07f55516c49808f89f7fd3935b0af04f.gif");
+  background: url("https://i.pinimg.com/originals/07/f5/55/07f55516c49808f89f7fd3935b0af04f.gif");  
   background-repeat: no-repeat;
 }
 
@@ -79,7 +79,7 @@
   background: url("../images/path.gif");
   &.project_card:hover,
   &.project_card:focus {
-    background: #00005c;
+    background: #6b6bff;
   }
 }
 .project_item3 {
@@ -118,12 +118,12 @@
   align-items: center;
 }
 
-.project_h2_bk {
-  text-align: center;
-  color: #fff;
-  font-size: 1.5rem !important;
-  opacity: 1 !important;
-}
+// .project_h2_bk {
+//   text-align: center;
+//   color: #fff;
+//   font-size: 1.5rem !important;
+//   opacity: 1 !important;
+// }
 
 .project_item9 {
   grid-area: 2 / 5 / 3 / 6;
@@ -144,6 +144,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.proj_link {
+  color: white;
+  text-decoration: none;
+}
+.proj_link:hover {
+  color: black;
 }
 
 *,
@@ -176,15 +184,12 @@
   font-family: inherit;
   text-align: center;
   text-transform: capitalize;
+  font-size: 2em;
 }
 
 .project_h1 {
   margin-top: 0;
-  font-size: 3.052em;
-}
-
-.project_h2 {
-  font-size: 1em;
+  font-size: 5rem;
 }
 
 .project_p {

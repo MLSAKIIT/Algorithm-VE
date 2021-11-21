@@ -4,8 +4,9 @@ import Hero from './Hero/Hero';
 import './Landing.css';
 import Top from './Top/Top';
 import Navbars from './Navbar/Navbars';
-import Algorithms from './Algorithms/Algorithms';
 import Projects from './Projects/Projects';
+import Algorithms from './Algorithms/Algorithms';
+
 
 const Landing = () => {
 
@@ -14,8 +15,8 @@ const Landing = () => {
             <Top/>
             <Navbars/>
             <Hero/>
-            <Algorithms/>
             <Projects/>
+            <Algorithms/>
             <Footer />
         </>
     );

@@ -1,25 +1,30 @@
 import React from 'react';
-import "./Projects.css"
-
+import './Projects.scss';
 
 const Projects = () => {
+
     return (
-        <>
-            <div className="algo_container">
-                <div className="algo_heading">
-                    <h2 className="algo_heading_h2">LOREM IPSUM AMET CONSET</h2>
-                    <p className="algo_heading_p">Lorem ipsum dolor sit amet. Non minus corrupti ea voluptatem voluptas non aliquam
-                        molestias eum vero rerum? Ex nulla molestiae eum accusamus error aut aliquam
-                        pariatur. Non laboriosam repudiandae sit nobis facilis qui exercitationem voluptatem.
-                        Eos doloremque aut animi quod et rerum perferendis!</p>
-                </div>
-                <div className="algo_button_div">
-                    <button type="button" className="algo_button">See More</button>
-                </div>
+            <div className="project_container">
+                <main className="project_grid">
+                    <section className="content project_item1">
+                        <h1 className="project_h1">Projects</h1>
+                        {/* <p className="project_p">Lorem ipsum dolor sit amet. Quo perspiciatis sunt qui nemo velit aut eaque accusamus ut commodi porro quo alias praesentium At provident error</p> */}
+                    </section>
+                    <section className="project_card project_item2 project_flex">
+                    <a className="proj_link" href="/splitman"><h2 className="project_h2">Splitman</h2></a>
+                    </section>
+                    <section className="project_card project_item5 project_flex">
+                    <a className="proj_link" href="/pathfinder"><h2 className="project_h2">Path Seeker</h2></a>
+                    </section>
+                    <section className="project_card project_item8 project_flex" >
+                    <a className="proj_link" href="/sudoku"><h2 className="project_h2">Sudoku</h2></a>
+                    </section>
+                    <section className="project_card project_item11 project_flex">
+                    <a className="proj_link" href="/huffman"><h2 className="project_h2">Image Deflater</h2></a>
+                    </section>
+                </main>
             </div>
-        </>
     );
 }
-
 
 export default Projects;

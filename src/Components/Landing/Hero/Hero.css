@@ -64,6 +64,12 @@
     margin: 10vh auto;
     width: 100vw;
   }
+  .hero_av {
+    font-size: 10rem;
+  }
+  .hero_algo_ve {
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width: 650px) {
   .carousel {

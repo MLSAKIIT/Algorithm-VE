@@ -1,4 +1,5 @@
 .footer_container {
+  align-items: center;
   height: 100vh;
   background-image: url("../images/Footer.jpg");
   background-repeat: no-repeat;
@@ -10,11 +11,12 @@
 }
 
 .footer_description {
-  width: 500px;
+  width: 800px;
   height: fit-content;
   margin-top: 5%;
   text-align: left;
   line-height: 1.8;
+  font-size: 1.5rem;
 }
 
 .footer_links_div {
@@ -23,6 +25,7 @@
   height: fit-content;
   margin-top: 5%;
   justify-content: space-evenly;
+  font-size: x-large;
 }
 .footer_links_heading {
   color: #a4dcff;
@@ -100,4 +103,13 @@
 .footer_animated_particles9 {
   animation: fly 6s linear infinite;
   transform: translateX(-20vw);
+}
+
+@media only screen and (max-width: 1080px) {
+  .footer_description{
+    font-size: 1rem;
+  }
+  .footer_links_div{
+    font-size: 100%;
+  }
 }

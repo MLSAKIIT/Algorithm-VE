@@ -10,7 +10,7 @@ function Top() {
     useLax();
 
     return (
-        <div id="main" style={{ backgroundImage: `url('https://i.postimg.cc/3J39qH1t/rocket.png')`, overflowX: 'hidden', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', zIndex: '1' }}>
+        <div id="main" style={{ backgroundImage: `url('https://i.postimg.cc/3J39qH1t/rocket.png')`, overflowX: 'hidden', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', zIndex: '1', backgroundPositionX: 'center', backgroundPositionY: 'bottom' }}>
             <TopAlgo />
             <SectionOne />
         </div>

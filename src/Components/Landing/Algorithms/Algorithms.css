@@ -12,18 +12,21 @@
 }
 
 .algo_heading {
+  padding-top: 10vh;
   width: 80%;
   height: 60%;
 }
 
 .algo_heading_h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #8cc9f0;
 }
 
 .algo_heading_p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #ffffff;
+  line-height: 180%;
+  
 }
 
 .algo_button_div {
@@ -46,6 +49,7 @@
   animation: glow 0.7s ease-in-out infinite alternate;
   border-width: 4px;
 }
+
 @keyframes glow {
   from {
     box-shadow: 0 0 20px #fff, 0 0 50px #fff, 0 0 50px #a4dcff,
@@ -56,4 +60,13 @@
   color: #a4dcff;
   border-color: #a4dcff;
   animation: none;
+}
+
+@media only screen and (max-width: 1080px) {
+  .algo_heading_h2{
+    font-size: 2rem;
+  }
+  .algo_heading_p{
+    font-size: 1.2rem;
+  }
 }
