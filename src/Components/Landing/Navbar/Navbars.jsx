@@ -8,7 +8,7 @@ import Logo from '../images/logo.png';
 const Navbars = () => {
     return (
         <>
-            <div className="navbar_container">
+            <div className="navbar_container" id="Landing_Nav">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Container fluid>
                         <img src={Logo} className="navbar_logo" alt="logo" />

@@ -7,7 +7,7 @@ import './Hero.css';
 const Hero = () => {
 
     return (
-        <div className="Hero"> 
+        <div className="Hero" id="Landing_Hero"> 
             <div className="hero_upper_container">
                 <div className="hero_container">
                     <ParticleBackground/>
