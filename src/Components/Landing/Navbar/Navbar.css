@@ -1,0 +1,39 @@
+.navbar_container {
+  width: auto;
+  padding: 1rem;
+  background-color: #1f2428;
+  overflow-x: hidden;
+  height: fit-content;
+  z-index: 100;
+}
+
+.navbar_login_button {
+  background-color: #34707b;
+  width: fit-content;
+  padding: 0 20px 0 20px;
+  color: white !important;
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+}
+
+.navbar-brand {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.navbar_a {
+  color: #fff !important;
+  font-size: 20px;
+}
+
+.navbar_a :hover {
+  color: aqua;
+}
+
+.navbar_logo {
+  z-index: 1;
+  height: 52px;
+  width: 52px;
+  margin-right: 30px;
+}

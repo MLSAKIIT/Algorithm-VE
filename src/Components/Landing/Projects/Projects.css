@@ -1,0 +1,59 @@
+.algo_container {
+  height: 100vh;
+  background-color: #050a0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.algo_heading {
+  width: 80%;
+  height: 60%;
+}
+
+.algo_heading_h2 {
+  font-size: 3rem;
+  color: #8cc9f0;
+}
+
+.algo_heading_p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.algo_button_div {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.algo_button {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  font-size: 20px;
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  transition: 0.4s ease-in;
+  animation: glow 0.7s ease-in-out infinite alternate;
+  border-width: 4px;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #fff, 0 0 50px #fff, 0 0 50px #a4dcff,
+      0 0 80px #a4dcff, 0 0 100px #a4dcff, 0 0 120px #a4dcff, 0 0 80px #a4dcff;
+  }
+}
+.algo_button:hover {
+  color: #a4dcff;
+  border-color: #a4dcff;
+  animation: none;
+}

@@ -1,0 +1,90 @@
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+#top_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: 2;
+  height: 100vh;
+  background: url("../images/Header.png");
+  background-size: cover;
+  background-position: fixed;
+}
+
+#top_header img {
+  width: 68pt;
+  margin-top: 12pt;
+}
+#top_header h2 {
+  margin-top: 60pt;
+  font-size: 24pt;
+  font-weight: 600;
+  text-align: center;
+}
+#top_header h4 {
+  font-size: 16pt;
+  font-weight: 300;
+  text-align: center;
+}
+#top_header i {
+  font-size: 14pt;
+  background: white;
+  color: black;
+  width: 30pt;
+  text-align: center;
+  height: 30pt;
+  line-height: 30pt;
+  border-radius: 15pt;
+  margin-top: -10pt;
+}
+.top_left {
+  position: absolute;
+  left: 80pt;
+}
+.top_right {
+  position: absolute;
+  right: 80pt;
+}
+
+.chunkyText {
+  width: 80pt;
+}
+
+.bubble {
+  position: absolute;
+  margin-top: 100pt;
+}
+.block {
+  position: absolute;
+  width: 60pt;
+  height: 60pt;
+}
+.bubble.a {
+  width: 100pt;
+  height: 100pt;
+  border-radius: 50pt;
+}
+.bubble.b {
+  width: 130pt;
+  height: 130pt;
+  border-radius: 65pt;
+}
+.bubble.c {
+  width: 50pt;
+  height: 50pt;
+  border-radius: 25pt;
+}
+
+.top_section {
+  z-index: 2;
+  display: block;
+  position: relative;
+}
+#top_section1 {
+  height: 600pt;
+  background: fixed;
+}

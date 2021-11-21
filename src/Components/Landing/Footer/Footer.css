@@ -1,0 +1,103 @@
+.footer_container {
+  height: 100vh;
+  background-image: url("../images/Footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.footer_description {
+  width: 500px;
+  height: fit-content;
+  margin-top: 5%;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.footer_links_div {
+  display: flex;
+  width: 550px;
+  height: fit-content;
+  margin-top: 5%;
+  justify-content: space-evenly;
+}
+.footer_links_heading {
+  color: #a4dcff;
+}
+
+.footer_links {
+  width: 15%;
+  height: fit-content;
+  line-height: 1.8;
+  list-style: none;
+}
+.footer_link_a :hover {
+  cursor: pointer;
+  color: #a4dcff;
+}
+
+.footer_particle_animation {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer_animated_particles {
+  height: 5px;
+  width: 5px;
+  background-color: #83ffff;
+  box-shadow: 0px 0px 10px 3px #1a88d0;
+  border-radius: 50%;
+  animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+  from {
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(-200vh);
+  }
+}
+
+.footer_animated_particles1 {
+  animation: fly 7s linear infinite;
+  transform: translateX(20vw);
+}
+.footer_animated_particles2 {
+  transform: translateX(20vw);
+  animation: fly 3s linear infinite;
+}
+.footer_animated_particles3 {
+  animation: fly 5s linear infinite;
+  transform: translateX(20vw);
+}
+.footer_animated_particles4 {
+  animation: fly 6s linear infinite;
+  transform: translateX(0vw);
+}
+.footer_animated_particles5 {
+  animation: fly 4s linear infinite;
+  transform: translateX(-20vw);
+}
+.footer_animated_particles6 {
+  animation: fly 3s linear infinite;
+  transform: translateX(-20vw);
+}
+.footer_animated_particles7 {
+  animation: fly 3s linear infinite;
+  transform: translateX(-20vw);
+}
+.footer_animated_particles8 {
+  animation: fly 4s linear infinite;
+  transform: translateX(-20vw);
+}
+.footer_animated_particles9 {
+  animation: fly 6s linear infinite;
+  transform: translateX(-20vw);
+}
