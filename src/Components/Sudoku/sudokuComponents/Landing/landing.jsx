@@ -21,8 +21,12 @@ useEffect(() => {
             mouse.y = event.y + canvas.clientTop / 2;
         });
 
-    ctx.font = 'bold 20px Verdana';
-    ctx.fillText('Sudoku', 0, 40);
+    ctx.font = 'bold 17px Verdana';
+    var txt = 'Latin \n Squares';
+    var lines = txt.split('\n');
+
+    for (var i = 0; i<lines.length; i++)
+        ctx.fillText(lines[i], 0, 30+i + (i*15) );
     const data = ctx.getImageData(0, 0, canvas.width, 100);
     const sprite = new Image();
     sprite.src = 'https://color-hex.org/colors/2cb67d.png';
@@ -147,11 +151,11 @@ useEffect(() => {
                     let dy = mouse.y - particleArray[a].y;
                     let mouseDistance = Math.sqrt(dx * dx + dy * dy);
                     if (mouseDistance < mouse.radius / 2) {
-                        ctx.strokeStyle = 'rgba(114, 117, 126,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(255, 137, 6,' + opacityValue + ')';
                     } else if (mouseDistance < mouse.radius - 20) {
-                        ctx.strokeStyle = 'rgba(44, 182, 125,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(242, 95, 76,' + opacityValue + ')';
                     } else if (mouseDistance < mouse.radius + 20) {
-                        ctx.strokeStyle = 'rgba(127, 90, 240,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(229, 49, 112,' + opacityValue + ')';
                     } else {
                         ctx.strokeStyle = 'rgba(114, 117, 126,' + opacityValue + ')';
                     }
@@ -168,7 +172,7 @@ useEffect(() => {
 },[])
     return(
         <div className="sudokuLanding">
-            <canvas id="canvas1"></canvas>
+            <canvas id="canvas1">            </canvas>
         </div>
     );
 }

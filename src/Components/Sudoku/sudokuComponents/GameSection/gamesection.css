@@ -2,9 +2,9 @@
 .sudoku-gamesection{
   height: auto;
   width: 100vw;
-  overflow: scroll;
+  /* overflow: scroll;
   background-image: url('../../Assets/background.jpg');
-  background-size:cover;
+  background-size:cover; */
   overflow-x: hidden;
 }
 
@@ -67,7 +67,6 @@
 
 #sudoku-gameland{
   display: none;
-  border: 2px solid black;
   width: 100vw;
   height: 100vh;
 }

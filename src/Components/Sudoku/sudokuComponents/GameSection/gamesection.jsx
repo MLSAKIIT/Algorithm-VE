@@ -9,8 +9,9 @@ import './gamesection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Celebration from '../../Assets/celebration.gif';
 import failure from '../../Assets/angry.gif';
-import StopWatch from "../StopWatch/stopwatch";
 import Points from "../Points/points";
+import {watch} from "../StopWatch/stopwatchjs"
+import '../StopWatch/stopwatch.css'
 
 export default function GameSection() 
 {
@@ -20,12 +21,13 @@ export default function GameSection()
   const [isShowProcessChecked, setIsShowProcessChecked] = useState(true);
   const [isSolved, setIsSolved] = useState(false);
   const [isSolving, setIsSolving] = useState(false);
-  const progressSpeed = 5;
+  let progressSpeed = 5;
 
 
   useEffect(() => 
   {
-    const storageBoard = Generator.generate(1);
+    watch();
+    const storageBoard = Generator.generate(4);
     if (storageBoard) 
     {
       setStartGrid(storageBoard);
@@ -153,6 +155,11 @@ export default function GameSection()
     document.getElementById('sudoku-gameland').style.display='none';
   }
 
+  const handleSkipbuttonClicked=()=>
+  {
+    // progressSpeed=0;
+    window.alert(progressSpeed);
+  }
   return (
     <div className="sudoku-gamesection">
       <div className="sudoku-land-page"> 
@@ -177,7 +184,6 @@ export default function GameSection()
           <DropdownButton 
             disabled={isSolving} 
             id="sudoku-dropdown-basic" 
-            // style={{border:"None", backgroundColor:"#7F5AF0", padding:"10px 20px"}}
             title="Generate Board" 
             onSelect={handleSelect}>
               <Dropdown.Item eventKey="0" className="sudoku-dropdown-options">Easy</Dropdown.Item>
@@ -187,18 +193,28 @@ export default function GameSection()
           </DropdownButton>
           <Button 
             className="mt-3 mr-1 sudoku-gamebttn" 
+            id="sudokusubmitbutton"
             style={{backgroundColor:"#2CB67D"}} 
             disabled={isSolving}  
             onClick={checksol}>
               Submit
           </Button>
+          {
+            isSolving ?(
           <Button 
-            className="mt-3 mr-1 sudoku-gamebttn" 
-            disabled={isSolving} 
+            className="mt-3 sudoku-gamebttn"  
+            style={{backgroundColor:"red" ,border:"none"}} 
+            onClick={handleSkipbuttonClicked}>
+                Skip
+          </Button>
+            ):(
+          <Button 
+            className="mt-3 sudoku-gamebttn" 
             style={{backgroundColor:"#2CB67D" , border:"none"}} 
             onClick={handleSolveButtonClicked}>
               Auto-Solve
           </Button>
+          )}
           <FormCheck  
             className="mt-3"  
             type="checkbox" 
@@ -230,8 +246,12 @@ export default function GameSection()
               Home
           </Button>
         </Col>
-        <Col sm={3} className="mb-5">
-          <StopWatch />
+        <Col 
+          sm={3} 
+          className="mb-5">
+          <div id="sudoku-stopwatch">
+                <h1 id="sudoku-timestamp">0.0</h1>
+          </div>
           <Row id="sudoku-result"></Row>
         </Col>
       </Row>
