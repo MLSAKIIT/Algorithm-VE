@@ -7,7 +7,7 @@ let pnt= () => {
           speed = Math.round(count / div_by),
           $display = $('.sudoku-count'),
           run_count = 1,
-          int_speed = 24;
+          int_speed = 1;
       
       var int = setInterval(function() {
         if(run_count < div_by){

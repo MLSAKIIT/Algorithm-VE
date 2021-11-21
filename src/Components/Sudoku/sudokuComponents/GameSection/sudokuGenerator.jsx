@@ -77,7 +77,7 @@ class SudokuGenerator
     }
     generate(l)
     {
-        var Kvalue=[45,49,53,64];
+        var Kvalue=[45,49,53,64,81];
         let rem=Kvalue[l];
         var grid=Array(9);
         for(let i=0;i<9;i++)
