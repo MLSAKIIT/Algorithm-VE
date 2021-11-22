@@ -82,11 +82,20 @@
 }
 @media only screen and (max-width: 500px) {
   .carousel {
-    height: 50vh;
+    height: 90vh;
   }
   .carousel .slide img {
     margin: 10vh auto;
     width: 100vw;
+  }
+  .hero_av {
+    font-size: 5rem;
+  }
+  .hero_algo_ve {
+    font-size: 2rem;
+  }
+  .hero_algo_p {
+    font-size: 1rem;
   }
 }
 

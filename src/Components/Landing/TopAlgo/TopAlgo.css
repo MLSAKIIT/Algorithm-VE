@@ -90,3 +90,11 @@
   height: 600pt;
   background: fixed;
 }
+
+@media only screen and (max-width: 400px) {
+
+  .top_section{
+    right: 50%;
+  }
+}
+

@@ -8,6 +8,8 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   color: #fff;
+  padding-left: 10vh;
+  padding-right: 10vh;
 }
 
 .footer_description {
@@ -111,5 +113,12 @@
   }
   .footer_links_div{
     font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer_links_heading{
+    font-size: 120%;
+    /* text-align: left; */
   }
 }

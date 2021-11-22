@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <div className="footer_container">
                 <div className="footer_description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    <p style={{textAlign:"justify"}}>Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut
@@ -16,13 +16,13 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="footer_links_div">
-                    <div className="footer_links">
+                    {/* <div className="footer_links">
                         <h3 className="footer_links_heading">About</h3>
                         <li className="footer_link_a"><a>Link</a></li>
                         <li className="footer_link_a"><a>Link</a></li>
                         <li className="footer_link_a"><a>Link</a></li>
                         <li className="footer_link_a"><a>Link</a></li>
-                    </div>
+                    </div> */}
                     <div className="footer_links">
                         <h3 className="footer_links_heading">Projects</h3>
                         <li className="footer_link_a"><a>Link</a></li>
