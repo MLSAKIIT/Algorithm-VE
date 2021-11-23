@@ -1,6 +1,8 @@
 import React from "react";
 import "./Huffman.css";
 import ImageGIF from "../../Assets/63534-image-preloader.gif";
+import { Link } from "react-router-dom";
+import HuffmanUploadPic from "./HuffmanUploadPic";
 const HuffmanHero = () => {
   return (
     <div>
@@ -20,10 +22,13 @@ const HuffmanHero = () => {
               </p>
             </div>
 
-            <div className="huffman-button-container">
-              <button>Get Started</button>
-              <button>View Gallery</button>
-            </div>
+            <Link to="/huffman/upload">
+              <div className="huffman-button-container">
+                <button>Get Started</button>
+
+                {/* <button>View Gallery</button> */}
+              </div>
+            </Link>
           </div>
         </div>
       </div>
