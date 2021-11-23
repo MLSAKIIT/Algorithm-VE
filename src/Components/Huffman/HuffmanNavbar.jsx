@@ -23,7 +23,10 @@ const HuffmanNavbar = () => {
                 className="d-inline-block align-top"
               />{" "}
               <div className="huffman-navbar-brand"></div>
-              <h2>Algorithm VE</h2>
+              <h2>
+                Algorithm VE |{" "}
+                <span style={{ color: "yellow" }}>Huffman Encoding</span>
+              </h2>
             </Navbar.Brand>
           </Container>
         </Navbar>
