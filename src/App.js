@@ -18,6 +18,8 @@ import Pathfinder from './Components/Pathfinder/Pathfinder';
 import Huffman from './Components/Huffman/Huffman';
 import Sudoku from './Components/Sudoku/Sudoku';
 import Splitman from './Components/Splitman/Splitman';
+import Developers from './Components/Developers/Developers';
+import AlgoMenu from './Components/Algorithms/AlgoMenu';
 
 
 AOS.init();
@@ -65,6 +67,17 @@ function App() {
           <Route path="/astar">
             <Astar />
           </Route>
+
+          {/* Deverloper Page Route */}
+          <Route path="/developers">
+            <Developers/>
+          </Route>
+
+          {/* Algorithm Page Routes */}
+          <Route path="/menu">
+            <AlgoMenu/>
+          </Route>
+
 
           {/* Landing Page Route */}
           <Route path="/">
