@@ -64,7 +64,7 @@ export default function NavBar() {
             </NavDropdown>
      
           </Nav>
-          <Nav.Link className="nav-toggles" href="/#developers">
+          <Nav.Link className="nav-toggles" href="/developers">
             <Button className="button" href="/login">
               Login
             </Button>

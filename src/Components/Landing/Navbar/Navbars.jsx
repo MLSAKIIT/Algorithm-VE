@@ -17,7 +17,7 @@ const Navbars = () => {
                             <Nav className="me-auto">
                                 <Nav.Link href="#about" className="navbar_a">ABOUT</Nav.Link>
                                 <Nav.Link href="#projects" className="navbar_a">PROJECTS</Nav.Link>
-                                <Nav.Link href="#developers" className="navbar_a">
+                                <Nav.Link href="developers" className="navbar_a">
                                     DEVELOPERS
                                 </Nav.Link>
                             </Nav>
