@@ -1,0 +1,6 @@
+.rowGrid{
+    display: flex;
+}
+.grid{
+    max-width: 80%;
+}
