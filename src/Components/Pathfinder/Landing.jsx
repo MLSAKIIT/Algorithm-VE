@@ -53,7 +53,7 @@ export default function Landing() {
       </Row>
 
       <div className="div_button">
-      <a href="#get_start_page">
+      <a href="/visualize">
         <div className="scrolldown">
           <div className="chevrons">
             <div className="chevrondown"></div>

@@ -20,6 +20,7 @@ import Sudoku from './Components/Sudoku/Sudoku';
 import Splitman from './Components/Splitman/Splitman';
 import Developers from './Components/Developers/Developers';
 import AlgoMenu from './Components/Algorithms/AlgoMenu';
+import Pfv from './Components/Pathfinder/sagar/react grid/pfv/Pfv';
 
 
 AOS.init();
@@ -31,6 +32,9 @@ function App() {
           {/* Project Routes*/}
           <Route path="/pathfinder">
             <Pathfinder />
+          </Route>
+          <Route path="/visualize">
+            <Pfv/>
           </Route>
           <Route path="/huffman">
             <Huffman />

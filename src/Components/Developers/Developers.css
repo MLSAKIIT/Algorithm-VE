@@ -2,26 +2,17 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,600';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
 
-body {
+.dev {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #999;
   background-color: black;
+  height: unset;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 20px 0;
+.headings {
+  /* margin: 0 0 20px 0; */
   text-transform: none;
   color: rgba(254, 82, 76, 1);
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -30,13 +21,13 @@ h6 {
   line-height: 1.5;
 }
 
-a:link,
-a:active,
-a:visited{
+.dev_link:link,
+.dev_link:active,
+.dev_link:visited{
   color:rgba(255,255,255,1);
 }
 
-a:hover{
+.dev_link:hover{
   color:rgba(255,255,255,0.6);
 }
 
@@ -44,9 +35,6 @@ a:hover{
   color: #a5a5a5;
 }
 
-.team{
-  margin:40px;
-}
 
 .team-member {
   margin: 15px 0;
@@ -62,7 +50,7 @@ a:hover{
 
 .team-member figure img {
   min-width: 100%;
-  height: 250px;
+  /* height: 250px; */
 }
 
 .team-member figcaption p {
@@ -124,7 +112,7 @@ a:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.team-member figure:hover figcaption ul li a:hover {
+.team-member figure:hover figcaption ul li .dev_link:hover {
   color: rgba(49, 49, 49, .97);
 }
 
