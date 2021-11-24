@@ -20,8 +20,9 @@ export default function Developers (){
 <section id="team" class="team content-section">
   <div class="container">
     <div class="row text-center">
-      <div class="col-md-12">
+      <div class="col-md-12 heading-text">
         <h2>Our Team</h2>
+        <br></br>
         <h3 class="caption gray">Meet the people who made this amazing page.</h3>
       </div>
 

@@ -65,10 +65,12 @@ export default function NavBar() {
      
           </Nav>
           <Nav.Link className="nav-toggles" href="/developers">
+          
             <Button className="button" href="/login">
               Login
             </Button>
           </Nav.Link>
+      
         </Navbar.Collapse>
       </Navbar>
     </div>
