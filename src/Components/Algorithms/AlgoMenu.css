@@ -1,304 +1,346 @@
-* {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    box-sizing: border-box;
-  }
-  .product-column{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-  }
-  
-  .listing-section, .cart-section {
-    width: 100%;
-    float: left;
-    padding: 1%;
-    border-bottom: 0.01em solid #dddbdb;
-  }
-  
-  .product {
-    border-radius: 2%;
-    margin: 0 2%;
-  }
-  .product-row{
-      display: flex;
-      flex-direction: row;
-      margin: 2% 0;
-  }
-  
-  .product:hover {
-    box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);  
-    -moz-box-shadow:    1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
-  }
-  
-  .image-box {
-    width: 25vw;
-    overflow: hidden;
-    border-radius: 2% 2% 0 0;
-  }
-  
-  .images {
-    height: 13em;
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;
-    border-radius: 2% 2% 0 0;
-    transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-  }
-  
-  .images:hover {
-    transform: scale(1.2);
-    overflow: hidden;
-    border-radius: 2%;
-  }
-  
-  /* IMAGES */
-  #image-1 {background-image: url("./pictures/algorithm.jpg");}
-  
-  #image-2 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-3 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-4 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-5 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-6 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-7 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-8 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-9 {background-image: url("./pictures/algorithm.jpg")}
-  
-  #image-10 {background-image: url("./pictures/algorithm.jpg")}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  background-color: black;
+}
 
-  #image-11 {background-image: url("./pictures/algorithm.jpg")}
+#con {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 200px;
+  height: auto;
+}
 
-  #image-12 {background-image: url("./pictures/algorithm.jpg")}
-  
-  .text-box {
-    width: 100%;
-    float: left;
-    border: 0.01em solid #dddbdb;
-    border-radius: 0 0 2% 2%;
-    padding: 1em;
-  }
-  
-  h2, h3 {
-    float: left;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin: 0.2em auto;
-  }
-  
-  .item, .price {
-    clear: left;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .price {
-    color: Grey;
-  }
-  
-  .description, label, button, input {
-    float: left;
-    clear: left;
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    text-align: center;
-    margin: 0.2em auto;
-  }
-  
-  input:focus {
-    outline-color: #fdf;
-  }
-  
-  label {
-    width: 60%;
-  }
-  
-  .text-box input {
-    width: 15%;
-    clear: none;
-  }
-  
-  .text-box button {
-    margin-top: 1em;
-  }
-  
-  button {
-    padding: 2%;
-    background-color: #dfd;
-    border: none;
-    border-radius: 2%;
-  }
-  
-  button:hover {
-    bottom: 0.1em;
-  }
-  
-  button:focus {
-    outline: 0;
-  }
-  
-  button:active {
-    bottom: 0;
-    background-color: #fdf;
-  }
-  
-  .table-heading, .table-content {
-    width: 75%;
-    margin: 1% 12.25%;
-    float: left;
-    background-color: #dfd;
-  }
-  
-  .table-heading h2 {
-    padding: 1%;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .cart-product {
-    width: 50%;
-    float: left;
-  }
-  
-  .cart-price {
-    width: 15%;
-    float: left;
-  }
-  
-  .cart-quantity {
-    width: 10%;
-    float: left;
-  }
-  
-  .cart-total {
-    width: 25%;
-    float: left;
-  }
-  
-  .cart-image-box {
-    width: 20%;
-    overflow: hidden;
-    border-radius: 2%;
-    float: left;
-    margin: 1%;
-  }
-  
-  .cart-images {
-    height: 7em;
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;
-  }
-  
-  .cart-item {
-    width: 20%;
-    float: left;
-    margin: 3.2em 1%;
-    text-align: center;
-  }
-  .cart-description {
-    width: 53%;
-    float: left;
-    margin: 3.2em 1%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    text-align: center;
-  }
-  
-  .cart-price h3, .cart-total h3 {
-    margin: 3.2em 5% 3.2em 20%;
-    width: 60%;
-  }
-  
-  .cart-quantity input {
-    margin: 3.2em 1%;
-    border: none;
-  }
-  
-  .remove {
-    width: 10%;
-    margin: 1px;
-    float: right;
-    clear: right;
-  }
-  
-  .coupon {
-    width: 20%;
-    background-color: #dfd;
-    margin: 1% 1% 1% 12.25%;
-    float: left;
-    height: 6em;
-  }
-  
-  .coupon input {
-    width: 60%;
-    border: none;
-    margin: 12.75% 5%;
-    padding: 1%;
-  }
-  
-  .coupon button {
-    width: 25%;
-    float: left;
-    clear: right;
-    margin: 12% 5% 12% 0;
-  }
-  
-  .keep-shopping {
-    width: 15%;
-    height: 6em;
-    float: left;
-    margin: 1% auto;
-    padding: 1%;
-    background-color: #dfd;
-  }
-  
-  .keep-shopping button {
-    text-transform: uppercase;
-    margin: 12% auto;
+#con2 {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+
+#con3 {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+.con4{
+	width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: auto;
+}
+h4 {
+  width: 90%;
+  position: absolute;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 120px;
+  color: #fff;
+}
+.f-title{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 30px;
+	font-family: 'Rock Salt', cursive;
+	-webkit-animation:colorchange 5s infinite alternate;
+}
+.zayn_1 {
+  position: relative;
+  margin-top: -150px;
+  background: url(http://i.huffpost.com/gen/1960925/images/o-COOLEST-CITIES-IN-AMERICA-facebook.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(255,162,52,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+	
+}
+
+.zayn_2 {
+  position: relative;
+  margin-top: 1px;
+  background: url(https://i.ytimg.com/vi/fwoDwajwqdo/maxresdefault.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(2,204,186,0.8);
+  width: 49%;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.zayn_3 {
+  position: relative;
+  float: right;
+  margin-top: -304px;
+  background: url(https://tinyurl.com/2p97bsmp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(169,81,237,0.8);
+  width: 49%;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.zayn_4 {
+  position: relative;
+  margin-top: 1px;
+  background: url(http://www.lolwot.com/wp-content/uploads/2015/02/top-16-coolest-buildings-in-the-world.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 3px solid rgba(255,84,131,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+.new {
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  left: 2%;
+  top: 8%;
+  padding: 15px;
+  background: linear-gradient(to right, #02b3e4 0%, #02ccba 100%);
+  border-radius: 50px 120px 120px;
+}
+.zayn_form{
+	position: relative;
+  margin-top: -150px;
+  background:#fafafa;
+  border-bottom: 3px solid rgba(255,162,52,0.8);
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px 0px rgba(46,61,73,0.9);
+  transition: all 0.3s ease;
+}
+
+
+.pop {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, #fa3350 0%, #fa3380 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.lat {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, deeppink 0%, #fa3380 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.free {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  padding: 15px;
+  background: linear-gradient(to right, deepskyblue 0%, skyblue 100%);
+  border-radius: 50px 120px 120px;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(000,000,000, 0.6);
+  border-radius: 6px;
+}
+
+
+
+@media only screen and (max-width: 840px) {
     
+  h4 {
+    font-size: 24px;
   }
-  
-  .checkout {
-    width: 37.25%;
-    margin: 1% 12.75% 1% 1%;
-    float: right;
-    background-color: #dfd;
-    height: 6em;
+
+  .zayn_2 {
+    position: relative;
+    width: 100%;
   }
-  
-  .checkout button {
-    width: 30%;
-    clear: none;
-    margin: 5.4% 0 5.4% 5.5%;
-    text-transform: uppercase;
+
+  .zayn_3 {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
   }
-  
-  .final-cart-total {
-    width: 15%;
-    float: right;
-    margin: 7%;
-    background-color: White;
+
+  .zayn_4 {
+    position: relative;
+    width: 100%;
+    margin-top: 360px;
   }
-  
-  .final-cart-total h3 {
-    color: Black;
-  }  
+
+  .date {
+    left: 70%;
+  }
+
+  .date-1 {
+    left: 70%;
+  }
+}
+
+.footer {
+  margin-top: 50px;
+  position: absolute;
+  background: #b24592;
+  background: -webkit-linear-gradient(to right, #b24592, #f15f79);
+  background: linear-gradient(to right, #b24592, #f15f79);
+  padding: 15px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.footer h1 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.shadow:hover {
+  box-shadow: 5px 1px 10px 0px rgba(46,61,73,0.1);
+  transition: all 0.3s ease;
+}
+
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shadow:hover,
+.shadow:focus {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+
+
+
+ @-webkit-keyframes colorchange {
+      0% {
+        
+        color: darkviolet;
+      }
+      
+      10% {
+        
+        color: #fa3380;
+      }
+      
+      20% {
+        
+        color: #02b3e4;
+      }
+      
+      30% {
+        
+        color: #02ccba;
+      }
+      
+      40% {
+        
+        color: #a951ed;
+      }
+      
+      50% {
+        
+        color: #ffa234;
+      }
+      
+      60% {
+        
+        color: #ff5483;
+      }
+      
+      70% {
+        
+        color: deepskyblue;
+      }
+      80% {
+     
+        color: purple;
+      }
+      
+      90% {
+     
+        color: lightpink;
+      }
+      
+      100% {
+        
+        color: #fff;
+      }
+    }
+
+
+
+
+
+.Follow {	  background:url("https://pbs.twimg.com/profile_images/959092900708544512/v4Db9QRv_bigger.jpg")no-repeat center / contain;
+	width: 50px;
+	height: 50px;
+	bottom: 9px;
+	right: 20px;
+	display:block;
+	position:fixed;
+	border-radius:50%;
+	z-index:999;
+	animation:  rotation 10s infinite linear;
+	}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+
+
+
+

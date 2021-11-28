@@ -1,133 +1,62 @@
 import React from "react";
 import './AlgoMenu.css'
 import { Container, Col, Image, Row } from 'react-bootstrap'
+import AlgoPage from "./AlgoPage/AlgoPage";
 
 
 export default function AlgoMenu() {
     return (
-        <div className="algomenu">
-            <div class="listing-section">
-                <div class="product-column">
-                <div class="product-row">
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-1">
-                               
-                            </div>
-                        </div>
-                        <div class="text-box">
-                            <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-2"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-3"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-row">
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-4"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-5"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-6"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-row">
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-7"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-8"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-9"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-row">
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-10"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-11"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="image-box">
-                            <div class="images" id="image-12"></div>
-                        </div>
-                        <div class="text-box">
-                        <h2 class="item">Algorithm Name</h2>
-                            <p class="description">Algorithm Link</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+        <>
+        <AlgoPage/>
+        
+<body>
+
+  <div id="con">
+    <div class="zayn_1 shadow">
+
+      <div class="overlay"></div>
+
+
+      <h4 class="f-title">ALGORITHM NAME</h4>
+    </div>
+  </div>
+
+
+  <div id="con2">
+    <div class="zayn_2 shadow">
+
+      <div class="overlay"></div>
+
+
+      <h4>He is not a lover who does not love forever.</h4>
+    </div>
+
+
+    <div class="zayn_3 shadow">
+
+      <div class="overlay"></div>
+
+
+      <h4>Show me your garden and I shall tell you what you are.</h4>
+    </div>
+  </div>
+
+
+  <div id="con3">
+    <div class="zayn_4 shadow">
+
+      <div class="overlay"></div>
+
+
+      <h4>All theory, dear friend, is gray, but the golden tree of life springs
+      ever green.</h4>
+    </div>
+  </div>
+	
+  <div class="footer">
+  </div>
+</body>
+
+        </>
     )
 }
